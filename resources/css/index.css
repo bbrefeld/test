@@ -167,6 +167,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 2rem;
 }
 .diensten .container .diensten-lijst figure {
@@ -205,7 +206,7 @@ h2 {
   background-color: #2a3443;
 }
 .diensten .container .diensten-lijst figure p {
-  font-size: 0.85rem;
+  font-size: 1rem;
   line-height: 1.8;
 }
 
@@ -478,9 +479,125 @@ th {
   }
 }
 
-/* 1/2hd versie */
-@media only screen and (max-width: 960px) {
+/* tablet fix */
+@media only screen and (max-width: 1200px) {
   html {
-    font-size: 13px;
+    font-size: 16px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 600px) {
+  header address figure figcaption {
+    display: none;
+  }
+  .jumbotron .container h1 {
+    font-size: 2rem;
+  }
+  .jumbotron .container p {
+    font-size: 1rem;
+  }
+  .jumbotron .container img {
+    width: 25%;
+    margin-bottom: 1rem;
+  }
+  .jumbotron {
+    height: auto;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    background-position: left;
+  }
+  .projecten {
+    background-image: none;
+  }
+  .projecten-groot figure {
+    width: 100%
+  }
+  .projecten-klein {
+    display: none;
+  }
+  .projecten-groot {
+    flex-wrap: wrap;
+  }
+  .projecten-groot figure figcaption {
+    margin-bottom: 2rem;
+  }
+  #project-groot3, #project-groot4 {
+    display: none;
+  }
+  footer .container {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    min-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .footer-right, .footer-left {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .form-div2 {
+    padding-right: 5%;
+  }
+  .form-div2 span {
+    margin-bottom: 1rem;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  tbody {
+    width: 100%;
+    display: block;
+  }
+  tr {
+    width: 100%;
+  }
+  th {
+    padding-right: 20vw;
+  }
+  .copyright-bar {
+    height: 2.5rem;
+  }
+}
+
+/* tablet version 1 */
+@media (max-aspect-ratio: 5/4) and (max-width: 1200px) and (min-width: 600px) {
+  .projecten-klein {
+    display: none;
+  }
+  .projecten-groot {
+    flex-wrap: wrap;
+  }
+  .projecten-groot figure {
+    width: 46%
+  }
+  .projecten-groot figure figcaption {
+    margin-bottom: 2rem;
+  }
+}
+
+/* tablet version 2 */
+@media only screen and (max-width: 1200px) {
+  .diensten .container .diensten-lijst {
+    justify-content: center;
+  }
+  .diensten .container .diensten-lijst figure {
+    width: 75%;
+    margin-top: 3rem;
+    border-radius: 10px;
+  }
+  #dienst2 {
+    margin: 0px;
+    margin-top: 3rem;
+  }
+}
+
+/* mobile version */
+@media only screen and (max-width: 900px) {
+  .diensten .container .diensten-lijst figure {
+    width: 100%;
+    margin-top: 3rem;
+    border-radius: 10px;
   }
 }
