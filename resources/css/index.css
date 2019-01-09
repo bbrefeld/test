@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans|Ubuntu');
+
+html {
+  font-size: 50px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+h1, h2, h3 {
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+p, a, span, figcaption {
+  font-family: 'Ubuntu', sans-serif;
+}
+hr {
+  width: 100%;
+  opacity: 0;
+  height: 0px;
+}
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  line-height: 1.3;
+}
+header {
+  width: 100%;
+}
+header address {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #368ff4;
+  font-size: 75%;
+}
+header address .container {
+  justify-content: flex-start;
+  width: 80%;
+}
+header address figure {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0.5rem 0px;
+}
+header address figure img {
+  margin-right: 0.2rem;
+}
+
+main {
+  width: 100%;
+}
+.jumbotron {
+  width: 100%;
+  height: 50vw;
+  display: flex;
+  justify-content: center;
+  background-color: #3644af;
+  background-image: url(../images/backgrounds/section-bg-hero8.png),radial-gradient(circle at center,#3644af 38%,#368ff4 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.jumbotron .container {
+  width: 70%;
+  height: 100%;
+}
+.jumbotron .container img {
+  width: 15%;
+  margin-bottom: 2rem;
+}
+.jumbotron .container h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+.jumbotron .container p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  max-width: 40rem;
+}
+.jumbotron .container .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 9rem;
+  background-color: white;
+  color: #3644af;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s linear, color 0.2s linear;
+}
+.jumbotron .container .button:hover {
+  background-color: blue;
+  color: white;
+}
+
+nav {
+  width: 100%;
+  border-bottom: 10px solid #368ff4;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 8rem;
+}
+nav .container {
+  max-width: 22rem;
+  min-width: 19rem;
+  width: 33.33%;
+}
+nav .container ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0px 1.25rem 0px;
+}
+nav .container ul li {
+  font-weight: bold;
+  color: #368ff4;
+}
+nav .container ul li:hover {
+  text-decoration: underline;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section .container {
+  margin-bottom: 8rem;
+}
+section h2, section p {
+  max-width: 35rem;
+  text-align: center;
+}
+h2 {
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+.underline {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #368ff4;
+  border-radius: 10px;
+  margin: 1rem 0px;
+}
+.diensten .container .diensten-lijst {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.diensten .container .diensten-lijst figure {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 31%;
+  padding: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 5px;
+  color: white;
+  box-sizing: border-box;
+}
+.diensten .container .diensten-lijst figure img {
+  width: 8vw;
+  height: 8vw;
+  margin-bottom: 1rem;
+}
+
+.diensten .container .diensten-lijst figure h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#dienst1 {
+  background-color: #368ff4;
+}
+#dienst2 {
+  background-color: #3644af;
+  margin: 0px 0.5rem;
+}
+#dienst3 {
+  background-color: #2a3443;
+}
+.diensten .container .diensten-lijst figure p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.belofte .container {
+  margin-bottom: 3rem;
+}
+
+.projecten {
+  background-image: url(../images/backgrounds/project-bg.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #2a3443;
+  color: white;
+}
+.projecten .container {
+  margin-top: 3rem;
+}
+.projecten-groot, .projecten-klein {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.projecten-groot figure {
+  width: 23%;
+}
+.projecten-groot figure img {
+  width: 100%;
+  background-color: gray;
+}
+.projecten-groot figure figcaption, .projecten-klein figure figcaption {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.projecten-klein {
+  width: 75%;
+}
+.projecten-klein figure {
+  width: 23%;
+}
+.projecten-klein figure img {
+  width: 100%;
+  background-color: green;
+}
+
+footer {
+  width: 100%;
+  color: white;
+  background-image: url(../images/backgrounds/it-services-08.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+footer .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #368ff4;
+  opacity: 0.6;
+}
+footer span, footer p, footer a, footer figcaption {
+  font-family: 'Open Sans', sans-serif;
+}
+footer .container {
+  margin-top: 8rem;
+  flex-wrap: nowrap;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  height: 100%;
+  z-index: 1;
+}
+form {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.form-div2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-right: 3rem;
+}
+form span {
+  width: 100%;
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+form .name, form .mail {
+  width: 50%;
+  height: 1.5rem;
+  box-sizing: border-box;
+}
+form .name {
+  padding-right: 2rem;
+}
+form .text {
+  height: 12rem;
+  width: 100%;
+}
+form .submit {
+  height: 2rem;;
+  width: 8rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  color: darkblue;
+  font-size: 1.2rem;
+  transition: background-color 0.15s linear, color 0.15s linear;
+}
+form .submit:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+form input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  color: white;
+  border: none;
+  border-bottom: 0.1rem solid white;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  resize: none;
+  background: transparent;
+  color: white;
+  border: none;
+  border-bottom: 0.1rem solid white;
+  margin-right: 2rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: white;
+    font-weight: bold;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+    font-weight: bold;
+}
+::placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: bold;
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2.5rem;
+}
+.footer-right {
+  min-width: 11rem;
+  width: 25%;
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  z-index: 1;
+}
+footer address, .address-title, footer address a, tr, .openingstijden {
+  width: 100%;
+}
+#kantoor {
+  margin-bottom: 1rem;
+}
+#contact {
+  margin-top: 1rem;
+}
+address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.address-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+table {
+  width: 100%;
+  display: block;
+}
+th {
+  text-align: left;
+  padding-right: 1rem;
+}
+.openingstijden {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.copyright-bar {
+  height: 1.5rem;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+}
+.copyright-bar .container {
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.copyright-bar a {
+  font-size: 0.75rem;
+  color: lightblue;
+  margin-right: 1rem;
+}
+.copyright-bar a:hover {
+  color: white;
+}
+
+/* HD versie */
