@@ -457,4 +457,30 @@ th {
   color: white;
 }
 
-/* HD versie */
+/* 2k versie */
+@media only screen and (max-width: 2880px) {
+  html {
+    font-size: 38px;
+  }
+}
+
+/* hd versie */
+@media only screen and (max-width: 1920px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+/* 3/4hd versie */
+@media only screen and (max-width: 1440px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+/* 1/2hd versie */
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 13px;
+  }
+}
