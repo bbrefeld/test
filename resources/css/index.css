@@ -25,6 +25,16 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+.svg {
+  background-size:100% 99px;
+  bottom: 0;
+  height: 99px;
+  z-index: 2;
+  width: 100%;
+}
+.colored-svg {
+  background-color: #2a3443;
+}
 .container {
   width: 70%;
   display: flex;
@@ -65,9 +75,10 @@ main {
 }
 .jumbotron {
   width: 100%;
-  height: 50vw;
+  height: auto;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   background-color: #3644af;
   background-image: url(../images/backgrounds/section-bg-hero8.png),radial-gradient(circle at center,#3644af 38%,#368ff4 100%);
   background-position: center;
@@ -78,6 +89,8 @@ main {
 .jumbotron .container {
   width: 70%;
   height: 100%;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 .jumbotron .container img {
   width: 15%;
@@ -210,6 +223,9 @@ h2 {
   line-height: 1.8;
 }
 
+.belofte {
+  flex-wrap: wrap;
+}
 .belofte .container {
   margin-bottom: 3rem;
 }
@@ -258,22 +274,10 @@ h2 {
 footer {
   width: 100%;
   color: white;
-  background-image: url(../images/backgrounds/it-services-08.jpg);
+  background-image: linear-gradient(140deg,#4f9df5 0%,rgba(4, 121, 253, 0.8) 100%),url(../images/backgrounds/footer.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-}
-footer .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #368ff4;
-  opacity: 0.6;
 }
 footer span, footer p, footer a, footer figcaption {
   font-family: 'Open Sans', sans-serif;
@@ -331,8 +335,10 @@ form .submit {
   border: none;
   border-radius: 6px;
   background-color: white;
-  color: darkblue;
-  font-size: 1.2rem;
+  color: #368ff4;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-family: 'Ubuntu', sans-serif;
   transition: background-color 0.15s linear, color 0.15s linear;
 }
 form .submit:hover {
@@ -391,12 +397,21 @@ input:focus, textarea:focus {
   width: 100%;
   height: 2.5rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .social-media a {
-  height: 3rem;
+  height: 2rem;
   min-height: 34px;
-  width: auto;
+  width: 2rem;
   min-width: 34px;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-media img {
+  height: 100%;
+  width: 100%;
 }
 .social-media #instagram-icon {
   margin-left: 1.5rem;
@@ -469,6 +484,42 @@ th {
 .copyright-bar a:hover {
   color: white;
 }
+#modal {
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  left: 0;
+  top: 0;
+}
+#modal #side-social-media {
+  display: flex;
+  flex-wrap: wrap;
+  width: 2.5rem;
+  min-width: 34px;
+  height: 7.5rem;
+  min-height: 102px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+#modal #side-social-media a {
+  height: 33.3%;
+  width: 100%;
+  display: block;
+}
+#modal #side-social-media a img {
+  width: 100%;
+  height: 100%;
+}
+#topright {
+  border-top-right-radius: 0.5rem;
+}
+#bottomright {
+  border-bottom-right-radius: 0.5rem;
+}
 
 /* 2k versie */
 @media only screen and (max-width: 2880px) {
@@ -515,7 +566,6 @@ th {
   }
   .jumbotron {
     height: auto;
-    padding-bottom: 2rem;
     padding-top: 2rem;
     background-position: left;
   }
