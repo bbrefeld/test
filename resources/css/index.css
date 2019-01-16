@@ -340,6 +340,7 @@ form .submit {
   letter-spacing: 2px;
   font-family: 'Ubuntu', sans-serif;
   transition: background-color 0.15s linear, color 0.15s linear;
+  -webkit-appearance: none;
 }
 form .submit:hover {
   background-color: blue;
@@ -418,7 +419,7 @@ input:focus, textarea:focus {
   margin-right: 1.5rem;
 }
 .footer-right {
-  min-width: 11rem;
+  min-width: 12rem;
   width: 25%;
   flex-basis: 25%;
   display: flex;
@@ -450,6 +451,7 @@ address {
   padding-bottom: 0.5rem;
 }
 table {
+  font-family: 'Ubuntu', sans-serif;
   width: 100%;
   display: block;
 }
@@ -485,7 +487,7 @@ th {
   color: white;
 }
 #modal {
-  width: 100%;
+  width: 2.5rem;
   height: 100vh;
   z-index: 5;
   position: fixed;
@@ -496,6 +498,7 @@ th {
   top: 0;
 }
 #modal #side-social-media {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 2.5rem;
@@ -504,6 +507,11 @@ th {
   min-height: 102px;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+  left: -2.1rem;
+  transition: left 0.5s ease-out;
+}
+#modal #side-social-media:hover {
+  left: 0px;
 }
 #modal #side-social-media a {
   height: 33.3%;
