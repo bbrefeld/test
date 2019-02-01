@@ -67,10 +67,11 @@ header address figure {
   display: flex;
   align-items: center;
   margin-right: 1rem;
-  padding: 0.5rem 0px;
+  padding: 0.35rem 0px;
 }
 header address figure img {
   margin-right: 0.2rem;
+  height: 0.75rem;
 }
 main {
   width: 100%;
@@ -121,10 +122,17 @@ nav .container ul {
   justify-content: space-between;
   align-items: center;
 }
+nav .container ul a {
+  display: block;
+  width: 25%;
+  text-align: center;
+}
 nav .container ul li {
   color: rgba(0,0,0,0.6);
   font-weight: bold;
   transition: opacity 0.5s ease-out;
+  width: 100%;
+  text-align: center;
 }
 nav .container ul .current-page {
   color: #368ff4;
@@ -193,6 +201,10 @@ h2 {
   border-radius: 0.35rem;
   color: white;
   box-sizing: border-box;
+  background-blend-mode: overlay;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .diensten .container .diensten-lijst figure img {
   width: 8vw;
@@ -208,25 +220,31 @@ h2 {
 }
 #dienst1 {
   background-color: #368ff4;
+  background-image: url(../images/backgrounds/over-ons-bckg1.jpg);
 }
 #dienst2 {
   background-color: #3644af;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  background-image: url(../images/backgrounds/over-ons-bckg3.jpg);
 }
 #dienst3 {
   background-color: #2a3443;
+  background-image: url(../images/backgrounds/over-ons-bckg2.jpg);
 }
 #dienst4 {
   background-color: #31C56F;
+  background-image: url(../images/backgrounds/over-ons-bckg2.jpg);
 }
 #dienst5 {
   background-color: #FFA03B;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  background-image: url(../images/backgrounds/over-ons-bckg1.jpg);
 }
 #dienst6 {
   background-color: #EB514E;
+  background-image: url(../images/backgrounds/over-ons-bckg3.jpg);
 }
 .diensten .container .diensten-lijst figure p {
   font-size: 1rem;
@@ -279,8 +297,47 @@ h2 {
 #statistiek4 {
   background-color: #354154;
 }
+.blank-section {
+  background-color: #f3f5f9;
+}
 .blank-section .container {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  margin-bottom: 0px;
+}
+.blank-section .container .employees {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 3rem;
+}
+.blank-section .container .employees div {
+  width: 31%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1.8;
+}
+.blank-section .container .employees div img {
   padding-top: 2rem;
+  padding-bottom: 1rem;
+  width: 50%;
+}
+.blank-section .container .employees div p {
+  width: 80%;
+  text-align: center;
+}
+.blank-section .container .employees div span {
+  padding-bottom: 3rem;
+  text-align: center;
+  font-weight: 400;
+}
+.blank-section .container .employees div .names {
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 0px;
 }
 .text-section {
   background-color: #2a3443;
@@ -554,4 +611,142 @@ th {
 }
 #bottomright {
   border-bottom-right-radius: 0.5rem;
+}
+
+/* 2k versie */
+@media only screen and (max-width: 2880px) {
+  html {
+    font-size: 38px;
+  }
+}
+
+/* hd versie */
+@media only screen and (max-width: 1920px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+/* 3/4hd versie */
+@media only screen and (max-width: 1440px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+/* tablet fix */
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* flex change 1 */
+@media only screen and (max-width: 1000px) {
+  .diensten .container .diensten-lijst figure {
+    width: 47%;
+    margin-bottom: 2rem;
+  }
+  #dienst2, #dienst5 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .statistieken .container {
+    padding-bottom: 2rem;
+  }
+  .statistieken .container .statistieken-lijst {
+    flex-wrap: wrap;
+    height: 30vw;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+  .statistieken .container .statistieken-lijst figure {
+    width: 30.8vw;
+    height: 12vw;
+  }
+  .blank-section .container .employees {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .blank-section .container .employees div {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .blank-section .container .employees div img {
+    width: 20%;
+    padding-top: 1rem;
+  }
+  .blank-section .container .employees div p {
+    box-sizing: border-box;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+  }
+  .blank-section .container .employees div span {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  header address figure figcaption {
+    display: none;
+  }
+  #nav-img {
+    display: none;
+  }
+  nav .container {
+    width: 100%;
+    min-width: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  nav .container ul {
+    height: 3rem;
+  }
+  .diensten .container .diensten-lijst figure {
+    width: 100%;
+  }
+  .statistieken .container .statistieken-lijst {
+    height: auto;
+  }
+  .statistieken .container .statistieken-lijst figure {
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 2rem;
+  }
+  footer .container {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    min-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .footer-right, .footer-left {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .form-div2 {
+    padding-right: 5%;
+  }
+  .form-div2 span {
+    margin-bottom: 1rem;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  tbody {
+    width: 100%;
+    display: block;
+  }
+  tr {
+    width: 100%;
+  }
+  th {
+    padding-right: 20vw;
+  }
+  .copyright-bar {
+    height: 2.5rem;
+  }
 }
