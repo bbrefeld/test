@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans|Ubuntu');
+
+html {
+  font-size: 50px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+p, a, span, figcaption {
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.svg {
+  background-size:100% 99px;
+  bottom: 0;
+  height: 99px;
+  z-index: 2;
+  width: 100%;
+}
+.container {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  line-height: 1.3;
+}
+header {
+  width: 100%;
+}
+header address {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #368ff4;
+  font-size: 75%;
+}
+header address .container {
+  justify-content: flex-start;
+  width: 80%;
+}
+header address figure {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0.35rem 0px;
+}
+header address figure img {
+  margin-right: 0.2rem;
+  height: 0.75rem;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+nav .container {
+  max-width: 25rem;
+  min-width: 22rem;
+  width: 33.33%;
+}
+nav .container ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container ul a {
+  display: block;
+  width: 25%;
+  text-align: center;
+}
+nav .container ul li {
+  color: rgba(0,0,0,0.6);
+  font-weight: bold;
+  transition: opacity 0.5s ease-out;
+  width: 100%;
+  text-align: center;
+}
+nav .container ul .current-page {
+  color: #368ff4;
+}
+nav .container ul li:hover {
+  opacity: 0.7;
+}
+nav .container ul #nav-img li:hover {
+  opacity: 1;
+}
+nav .container #nav-img {
+  width: 4rem;
+  height: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+nav .container #nav-img li img {
+  width: 100%;
+  height: 100%;
+}
+footer {
+  width: 100%;
+  color: white;
+  background-image: linear-gradient(140deg,#4f9df5 0%,rgba(4, 121, 253, 0.8) 100%),url(../images/backgrounds/footer.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer span, footer p, footer a, footer figcaption {
+  font-family: 'Open Sans', sans-serif;
+}
+footer .container {
+  margin-top: 8rem;
+  flex-wrap: nowrap;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  height: 100%;
+  z-index: 1;
+}
+form {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.form-div2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-right: 3rem;
+}
+form span {
+  width: 100%;
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+form .name, form .mail {
+  width: 50%;
+  height: 1.5rem;
+  box-sizing: border-box;
+}
+form .name {
+  padding-right: 2rem;
+}
+form .text {
+  height: 12rem;
+  width: 100%;
+}
+form .submit {
+  height: 2rem;;
+  width: 8rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  color: #368ff4;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-family: 'Ubuntu', sans-serif;
+  transition: background-color 0.15s linear, color 0.15s linear;
+  -webkit-appearance: none;
+}
+form .submit:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+form input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  color: white;
+  border: none;
+  border-bottom: 0.1rem solid white;
+  padding-left: 1rem;
+  font-size: 1rem;
+  border-radius: 0px;
+}
+form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  resize: none;
+  background: transparent;
+  color: white;
+  border: none;
+  border-bottom: 0.1rem solid white;
+  margin-right: 2rem;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: white;
+    font-weight: bold;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+    font-weight: bold;
+}
+::placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: bold;
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.social-media a {
+  height: 2rem;
+  min-height: 34px;
+  width: 2rem;
+  min-width: 34px;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-media img {
+  height: 100%;
+  width: 100%;
+}
+.social-media #instagram-icon {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.footer-right {
+  min-width: 12rem;
+  width: 25%;
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  z-index: 1;
+}
+footer address, .address-title, footer address a, tr, .openingstijden {
+  width: 100%;
+}
+#kantoor {
+  margin-bottom: 1rem;
+}
+#contact {
+  margin-top: 1rem;
+}
+address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.address-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+table {
+  font-family: 'Ubuntu', sans-serif;
+  width: 100%;
+  display: block;
+}
+th {
+  text-align: left;
+  padding-right: 1rem;
+}
+.openingstijden {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.copyright-bar {
+  height: 1.5rem;
+  width: 100%;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+}
+.copyright-bar .container {
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.copyright-bar a {
+  font-size: 0.75rem;
+  color: lightblue;
+  margin-right: 1rem;
+}
+.copyright-bar a:hover {
+  color: white;
+}
+#modal {
+  width: 2.5rem;
+  height: 100vh;
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  left: 0;
+  top: 0;
+}
+#modal #side-social-media {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 2.5rem;
+  min-width: 34px;
+  height: 7.5rem;
+  min-height: 102px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  left: -2.1rem;
+  transition: left 0.5s ease-out;
+}
+#modal #side-social-media:hover {
+  left: 0px;
+}
+#modal #side-social-media a {
+  height: 33.3%;
+  width: 100%;
+  display: block;
+}
+#modal #side-social-media a img {
+  width: 100%;
+  height: 100%;
+}
+#topright {
+  border-top-right-radius: 0.5rem;
+}
+#bottomright {
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* 2k versie */
+@media only screen and (max-width: 2880px) {
+  html {
+    font-size: 38px;
+  }
+}
+
+/* hd versie */
+@media only screen and (max-width: 1920px) {
+  html {
+    font-size: 25px;
+  }
+}
+
+/* 3/4hd versie */
+@media only screen and (max-width: 1440px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+/* tablet fix */
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  header address figure figcaption {
+    display: none;
+  }
+  #nav-img {
+    display: none;
+  }
+  nav .container {
+    width: 100%;
+    min-width: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  nav .container ul {
+    height: 3rem;
+  }
+  footer .container {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    min-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .footer-right, .footer-left {
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .form-div2 {
+    padding-right: 5%;
+  }
+  .form-div2 span {
+    margin-bottom: 1rem;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  tbody {
+    width: 100%;
+    display: block;
+  }
+  tr {
+    width: 100%;
+  }
+  th {
+    padding-right: 20vw;
+  }
+  .copyright-bar {
+    height: 2.5rem;
+  }
+}
