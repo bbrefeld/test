@@ -35,9 +35,6 @@ body {
 .colored-svg {
   background-color: #2a3443;
 }
-#inverted-svg {
-  transform: rotate(180deg);
-}
 .container {
   width: 70%;
   display: flex;
@@ -591,11 +588,6 @@ th {
   min-height: 102px;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  left: -2.1rem;
-  transition: left 0.5s ease-out;
-}
-#modal #side-social-media:hover {
-  left: 0px;
 }
 #modal #side-social-media a {
   height: 33.3%;
@@ -748,5 +740,8 @@ th {
   }
   .copyright-bar {
     height: 2.5rem;
+  }
+  #modal {
+    display: none;
   }
 }

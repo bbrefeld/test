@@ -144,12 +144,155 @@ footer .container {
   height: 100%;
   z-index: 1;
 }
-form {
+
+.currentStats {
+  padding-bottom: 5rem;
+}
+.currentStats svg {
+  height: 2rem;
+  fill: gray;
+}
+#reviewScore {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+#reviewScore input:hover ~ label {
+  filter: invert(59%) sepia(73%) saturate(1397%) hue-rotate(1deg) brightness(106%) contrast(102%)
+}
+.currentStats .container p {
+  width: 100%;
+  text-align: center;
+}
+
+.currentReviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: hidden;
+}
+
+.visibleReviews {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  left: 0;
+  right: 0;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.visibleReviews div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: lightgray;
+  width: 18%;
+  height: 80%;
+  margin: 0 1% 0 1%;
+}
+.visibleReviews div p {
+  height: 80%;
+  width: 100%;
+  text-align: center;
+}
+.visibleReviews div span {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+.visibleReviews-translate-next {
+  transition: left 0.5s ease-out;
+  left: 20%;
+}
+.visibleReviews-translate-prev {
+  transition: left 0.5s ease-out;
+  left: -20%;
+}
+#reviewOverlay1, #reviewOverlay2 {
+  position: relative;
+  bottom: 15rem;
+  background-color: white;
+  z-index: 2;
+  width: 20%;
+  height: 15rem;
+  margin-bottom: -15rem;
+  display: flex;
+  align-items: center;
+}
+#reviewOverlay1 {
+  margin-left: 0px;
+  margin-right: auto;
+  border-right: 1px solid blue;
+  justify-content: flex-end;
+}
+#reviewOverlay2{
+  margin-left: auto;
+  margin-right: 0px;
+  border-left: 1px solid blue;
+  justify-content: flex-start;
+}
+
+#reviewPrev, #reviewNext {
+  font-size: 2rem;
+  color: black;
+  padding: 0.5rem;
+}
+#reviewPrev:hover, #reviewNext:hover {
+  background-color: lightgray;
+}
+
+.writeReviews form {
+  width: 70%;
+}
+#reviewInput {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#reviewInput #reviewNaam, #reviewInput #reviewTitel {
+  width: 50%;
+}
+#reviewNaam {
+  padding-right: 1%;
+  box-sizing: border-box;
+}
+#reviewScore {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#reviewScore input {
+  display: none;
+}
+#reviewScore label {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/icons/star.svg");
+  filter: invert(86%) sepia(9%) saturate(21%) hue-rotate(10deg) brightness(100%) contrast(86%);
+}
+#reviewInput #reviewNaam input, #reviewInput #reviewTextarea, #reviewInput #reviewTextarea textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contactformulier {
   width: 100%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
-.form-div2 {
+#contactformulier .form-div2 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -158,24 +301,24 @@ form {
   box-sizing: border-box;
   padding-right: 3rem;
 }
-form span {
+#contactformulier span {
   width: 100%;
   font-size: 2.5rem;
   padding-bottom: 0.5rem;
 }
-form .name, form .mail {
+#contactformulier .name, #contactformulier .mail {
   width: 50%;
   height: 1.5rem;
   box-sizing: border-box;
 }
-form .name {
+#contactformulier .name {
   padding-right: 2rem;
 }
-form .text {
+#contactformulier .text {
   height: 12rem;
   width: 100%;
 }
-form .submit {
+#contactformulier .submit {
   height: 2rem;;
   width: 8rem;
   padding-left: 0px;
@@ -191,12 +334,12 @@ form .submit {
   transition: background-color 0.15s linear, color 0.15s linear;
   -webkit-appearance: none;
 }
-form .submit:hover {
+#contactformulier .submit:hover {
   background-color: blue;
   color: white;
   cursor: pointer;
 }
-form input {
+#contactformulier input {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -208,7 +351,7 @@ form input {
   font-size: 1rem;
   border-radius: 0px;
 }
-form textarea {
+#contactformulier textarea {
   width: 100%;
   box-sizing: border-box;
   height: 100%;
@@ -222,20 +365,20 @@ form textarea {
   padding-left: 1rem;
   font-size: 1rem;
 }
-::-webkit-input-placeholder { /* Edge */
+#contactformulier ::-webkit-input-placeholder { /* Edge */
     color: white;
     font-weight: bold;
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+#contactformulier :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: white;
     font-weight: bold;
 }
-::placeholder {
+#contactformulier ::placeholder {
     color: white;
     opacity: 1;
     font-weight: bold;
 }
-input:focus, textarea:focus {
+#contactformulier input:focus, #contactformulier textarea:focus {
   outline: none;
 }
 
@@ -356,11 +499,6 @@ th {
   min-height: 102px;
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  left: -2.1rem;
-  transition: left 0.5s ease-out;
-}
-#modal #side-social-media:hover {
-  left: 0px;
 }
 #modal #side-social-media a {
   height: 33.3%;
@@ -433,10 +571,10 @@ th {
     width: 100%;
     flex-basis: 100%;
   }
-  .form-div2 {
+  #contactformulier .form-div2 {
     padding-right: 5%;
   }
-  .form-div2 span {
+  #contactformulier .form-div2 span {
     margin-bottom: 1rem;
   }
   table {
@@ -455,5 +593,8 @@ th {
   }
   .copyright-bar {
     height: 2.5rem;
+  }
+  #modal {
+    display: none;
   }
 }

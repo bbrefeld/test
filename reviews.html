@@ -38,18 +38,91 @@
         <div class="container">
           <ul>
             <a href="./index.html"><li>Home</li></a>
-            <a href="#"><li>Reviews</li></a>
+            <a href="#"><li class="current-page">Reviews</li></a>
             <a id="nav-img" href="#"><li><img src="resources/images/logos/logo.png" alt="Logo Brefeld Computers"/></li></a>
             <a href="./over-ons.html"><li>Over ons</li></a>
-            <a href="#"><li class="current-page">Contact</li></a>
+            <a href="#"><li>Contact</li></a>
           </ul>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="reviews">
+      <section class="currentStats">
         <div class="container">
+          <figure class="currentRatingStars"><svg id="star5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></figure>
+          <figure class="currentRatingStars"><svg id="star4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></figure>
+          <figure class="currentRatingStars"><svg id="star3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></figure>
+          <figure class="currentRatingStars"><svg id="star2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></figure>
+          <figure class="currentRatingStars"><svg id="star1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg></figure>
+          <p><span id="numberOfReviews">x</span> Hebben ons een gemiddeld cijfer gegeven van <span>y</span></p>
+        </div>
+      </section>
+
+      <section class="currentReviews">
+        <div class="visibleReviews">
+          <div class="review">
+            <p>There was a problem loading reviews</p>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="review">
+            <p>There was a problem loading reviews</p>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="review">
+            <p>There was a problem loading reviews</p>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="review">
+            <p>There was a problem loading reviews</p>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="review">
+            <p>There was a problem loading reviews</p>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="reviewOverlay1">
+          <a id="reviewPrev">&#10094;</a>
+        </div>
+        <div id="reviewOverlay2">
+          <a id="reviewNext">&#10095;</a>
+        </div>
+
+
+      </section>
+
+      <section class="writeReviews">
+        <div id="reviewModal" class="container">
+          <form target="_blank" method="post" action="http://localhost:8888/review">
+            <div id="reviewInput">
+              <div  id="reviewNaam"><input type="text" name="name" placeholder="Naam" required></div><br>
+              <div id="reviewScore">
+                <input id="givenStar5" type="radio" value="5" class="hide"/>
+                <label for="givenStar5"></label>
+                <input id="givenStar4" type="radio" value="4" class="hide"/>
+                <label for="givenStar4"></label>
+                <input id="givenStar3" type="radio" value="3" class="hide"/>
+                <label for="givenStar3"></label>
+                <input id="givenStar2" type="radio" value="2" class="hide"/>
+                <label for="givenStar2"></label>
+                <input id="givenStar1" type="radio" value="1" class="hide"/>
+                <label for="givenStar1"></label>
+              </div>
+              <div  id="reviewTextarea"><textarea name="reviewContent" placeholder="review" required></textarea></div><br>
+              <input class="submit" type="submit" value="VERZENDEN">
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -59,7 +132,7 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="footer-left">
-            <form method="post">
+            <form id="contactformulier" method="post" action="http://localhost:8888/form">
               <div class="form-div2">
                 <span>We zijn hier om te helpen</span>
                 <div class="name">
@@ -119,4 +192,7 @@
       </div>
     </div>
   </body>
+
+  <script src="resources/javascript/reviews.js"></script>
+
 </html>
