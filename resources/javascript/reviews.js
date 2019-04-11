@@ -1,6 +1,7 @@
 // Load dynamic reviews when page finished loading
 window.onload = async function() {
   await getReviews();
+  calculateAverageRating();
   loadReviews();
 }
 
@@ -23,6 +24,18 @@ let ratingInputLabels = document.getElementById("reviewScore").getElementsByTagN
 
 // Reviews placeholder (will be replaced by server response)
 const reviewArray = []
+
+// Calculate average rating of all reviews
+const calculateAverageRating = () => {
+  let totalScore = 0;
+  for (i=0; i<reviewArray.length; i++) {
+    totalScore = totalScore + reviewArray[i].rating;
+  }
+  const averageRating = Math.round((totalScore/reviewArray.length)*10)/10;
+  document.getElementById("numberOfReviews").innerHTML=reviewArray.length;
+  document.getElementById("averageRating").innerHTML=averageRating;
+  document.getElementsByClassName("full")[0].style.width=(averageRating*20)+"%";
+}
 
 // Click counter to determine when to reset review view
 let reviewSwitch = 0;
@@ -114,6 +127,7 @@ const getReviews = async () => {
   await fetch('http://localhost:8888/reviews')
   .then(res => res.json())
   .then(reviewresponse => {
+    console.log(reviewresponse);
     for (i=0; i<reviewresponse.length; i++) {
       reviewArray.push(reviewresponse[reviewresponse.length-i-1]);
     };

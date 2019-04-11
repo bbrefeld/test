@@ -18,6 +18,7 @@ con.connect(function(err) {
   console.log("Connected to Database");
 });
 
+
 // Logging into mail server
 const mailAccount = nodemailer.createTransport({
   service: 'gmail',
@@ -26,9 +27,10 @@ const mailAccount = nodemailer.createTransport({
     pass: '5b&jMMJn4'
   },
   tls: {
-        rejectUnauthorized: false
-    }
+    rejectUnauthorized: false
+  }
 });
+
 
 // Form to jS object
 let formObject = {};
@@ -41,6 +43,7 @@ const formSerialize = body => {
   };
   console.log(formObject);
 }
+
 
 // Get current date
 let today = new Date();
@@ -57,6 +60,31 @@ const getCurrentDate = () => {
   today = dd + '/' + mm + '/' + yyyy;
 }
 
+
+// Readstream Function
+const readFile = async function(filePath, res) {
+
+  const readtest = fs.createReadStream(filePath);
+  readtest.pipe(res);
+  readtest.on('error', function(err) {
+    console.log(err);
+    res.end(err);
+  });
+}
+
+
+// Turn cookies into usable object
+function parseCookies (request) {
+  let list = {},
+    rc = request.headers.cookie;
+    rc && rc.split(';').forEach(function( cookie ) {
+      const parts = cookie.split('=');
+      list[parts.shift().trim()] = decodeURI(parts.join('='));
+    });
+  return list;
+}
+
+
 // Server logic
 http.createServer(function(req, res) {
 
@@ -69,8 +97,28 @@ http.createServer(function(req, res) {
         res.writeHead(200, {"Content-Type": "text/json"});
         res.end(JSON.stringify(result));
       });
+
     }
-  }
+
+
+      // Return created review to thankyou page
+      else if (req.url === "/confirmReview") {
+
+        res.writeHead(200)
+
+        // Get review that user created through cookie
+        con.query("SELECT * FROM reviews.reviews WHERE reviewID = 20"/* + parseCookies(req).reviewID*/, function(err, result, fields) {
+          if (err) throw err;
+
+          res.writeHead(200, {"Content-Type": "text/json"});
+          res.end(JSON.stringify(result));
+
+        });
+
+      };
+
+    }
+
 
     // POST request
     else if (req.method === "POST") {
@@ -81,7 +129,8 @@ http.createServer(function(req, res) {
       body.push(chunk);
     });
 
-    // After receiving all data change array back to original object
+
+    // After receiving all data change array back to usable object and continue handling
     req.on('end', () => {
 
       // Form handling
@@ -89,7 +138,7 @@ http.createServer(function(req, res) {
         formSerialize(body);
 
         let mailOptions = {
-          from: 'noreply@brefeld-computers.com',
+          from: ' "Brefeld Computers" noreply@brefeld-computers.com',
           to: 'info@brefeld-computers.com, ' + formObject.mail,
           subject: 'Contact Brefeld Computers',
           text: "Bedankt voor uw aanvraag \n Wij nemen zo snel mogelijk contact met u op \n \n" + formObject.message + "\n \n Met vriendelijke groet \n" + formObject.name
@@ -105,35 +154,46 @@ http.createServer(function(req, res) {
         res.end();
         return;
 
-        // Review Handling
-      } else if (req.url === "/review") {
+      }
+
+
+      // Review handling
+      else if (req.url === "/review") {
         formSerialize(body);
         getCurrentDate();
 
         // Data to Database
         console.log(today)
-        con.query("INSERT INTO reviews.reviews (name, reviewContent, date) VALUES ?", [[[formObject.name, formObject.reviewContent, today]]], function(err, result) {
+        con.query("INSERT INTO reviews.reviews (name, rating, reviewContent, date) VALUES ?", [[[formObject.name, formObject.rating, formObject.reviewContent, today]]], function(err, result) {
           if (err) throw err;
           con.query("SELECT * FROM reviews.reviews WHERE reviewID = " + result.insertId, function(err, createdReview, fields) {
             if (err) throw err;
 
-            // Send back received information
+            // Set cookie to identify what review user created
             console.log(createdReview);
-            res.writeHead(201, {});
-            let readtest = fs.createReadStream('./index.html');
-            readtest.on('open', function() {
-              readtest.pipe(res)
+            console.log(result.insertId);
+            res.writeHead(302, {
+              "Set-Cookie": "reviewID="+result.insertId,
+              "Content-Type": "text/html",
+              "Location": "https://www.w3.org/People/mimasa/test/"
             });
-            readtest.on('error', function(err) {
-              console.log(err);
-              res.end(err);
-            });
+
+            res.end();
+
           });
         });
-      } else {
+
+      }
+
+
+      // When request is sent to wrong adress return error
+      else {
         res.writeHead(404);
         res.end();
+
       };
+
+
     });
   };
 

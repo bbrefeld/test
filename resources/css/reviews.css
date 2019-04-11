@@ -77,7 +77,7 @@ nav .container ul {
 }
 nav .container ul a {
   display: block;
-  width: 25%;
+  width: 20%;
   text-align: center;
 }
 nav .container ul li {
@@ -145,19 +145,39 @@ footer .container {
   z-index: 1;
 }
 
+
+
 .currentStats {
   padding-bottom: 5rem;
 }
-.currentStats svg {
-  height: 2rem;
-  fill: gray;
+.currentStats figure {
+  position: relative;
 }
+.currentStats .full, .currentStats .empty {
+  height: 2rem;
+}
+.currentStats div img {
+  height: 100%;
+}
+.empty img {
+  filter: invert(86%) sepia(9%) saturate(21%) hue-rotate(10deg) brightness(100%) contrast(86%);
+}
+.full {
+  position: absolute;
+  top: 0;
+  width: 75%;
+  overflow: hidden;
+}
+.full img {
+  filter: invert(59%) sepia(73%) saturate(1397%) hue-rotate(1deg) brightness(106%) contrast(102%);
+}
+
 #reviewScore {
   unicode-bidi: bidi-override;
   direction: rtl;
 }
 #reviewScore input:hover ~ label {
-  filter: invert(59%) sepia(73%) saturate(1397%) hue-rotate(1deg) brightness(106%) contrast(102%)
+  filter: invert(59%) sepia(73%) saturate(1397%) hue-rotate(1deg) brightness(106%) contrast(102%);
 }
 .currentStats .container p {
   width: 100%;
@@ -508,6 +528,9 @@ th {
 #modal #side-social-media a img {
   width: 100%;
   height: 100%;
+}
+#modal #side-social-media a img:hover {
+  width: 110%;
 }
 #topright {
   border-top-right-radius: 0.5rem;
