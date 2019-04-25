@@ -1,0 +1,46 @@
+#modal {
+  width: 2.5rem;
+  height: 100vh;
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  left: 0;
+  top: 0;
+}
+#modal #side-social-media {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 2.5rem;
+  min-width: 34px;
+  height: 7.5rem;
+  min-height: 102px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+#modal #side-social-media a {
+  height: 33.3%;
+  width: 100%;
+  display: block;
+}
+#modal #side-social-media a img {
+  width: 100%;
+  height: 100%;
+}
+#modal #side-social-media a img:hover {
+  width: 110%;
+}
+#modal #topright {
+  border-top-right-radius: 0.5rem;
+}
+#modal #bottomright {
+  border-bottom-right-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  #modal {
+    display: none;
+  }
+}

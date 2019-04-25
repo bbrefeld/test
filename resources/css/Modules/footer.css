@@ -1,57 +1,19 @@
-html {
-  font-size: 50px;
-}
-a {
-  color: white;
-  text-decoration: none;
-}
-p, a, span, figcaption {
-  font-family: 'Ubuntu', sans-serif;
-}
-body {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.svg {
-  background-size:100% 99px;
-  bottom: 0;
-  height: 99px;
-  z-index: 2;
-  width: 100%;
-}
-.container {
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  align-content: center;
-  margin-left: 15%;
-  margin-right: 15%;
-  line-height: 1.3;
-}
-h1, h2, h3 {
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-}
-footer {
+#footer {
   width: 100%;
   color: white;
-  background-image: linear-gradient(140deg,#4f9df5 0%,rgba(4, 121, 253, 0.8) 100%),url(../images/backgrounds/footer.jpg);
+  background-image: linear-gradient(140deg,#4f9df5 0%,rgba(4, 121, 253, 0.8) 100%),url(../images/backgrounds/#footer.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-footer span, footer p, footer a, footer figcaption {
+#footer span, #footer p, #footer a, #footer figcaption {
   font-family: 'Open Sans', sans-serif;
 }
-footer .container {
+#footer .container {
   margin-top: 8rem;
   flex-wrap: nowrap;
 }
-.footer-left {
+#footer .footer-left {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,12 +22,12 @@ footer .container {
   height: 100%;
   z-index: 1;
 }
-#contactformulier {
+#footer #contactformulier {
   width: 100%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
-#contactformulier .form-div2 {
+#footer #contactformulier .form-div2 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -74,24 +36,24 @@ footer .container {
   box-sizing: border-box;
   padding-right: 3rem;
 }
-#contactformulier span {
+#footer #contactformulier span {
   width: 100%;
   font-size: 2.5rem;
   padding-bottom: 0.5rem;
 }
-#contactformulier .name, #contactformulier .mail {
+#footer #contactformulier .name, #contactformulier .mail {
   width: 50%;
   height: 1.5rem;
   box-sizing: border-box;
 }
-#contactformulier .name {
+#footer #contactformulier .name {
   padding-right: 2rem;
 }
-#contactformulier .text {
+#footer #contactformulier .text {
   height: 12rem;
   width: 100%;
 }
-#contactformulier .submit {
+#footer #contactformulier .submit {
   height: 2rem;;
   width: 8rem;
   padding-left: 0px;
@@ -107,12 +69,12 @@ footer .container {
   transition: background-color 0.15s linear, color 0.15s linear;
   -webkit-appearance: none;
 }
-#contactformulier .submit:hover {
+#footer #contactformulier .submit:hover {
   background-color: blue;
   color: white;
   cursor: pointer;
 }
-#contactformulier input {
+#footer #contactformulier input {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -124,7 +86,7 @@ footer .container {
   font-size: 1rem;
   border-radius: 0px;
 }
-#contactformulier textarea {
+#footer #contactformulier textarea {
   width: 100%;
   box-sizing: border-box;
   height: 100%;
@@ -138,25 +100,23 @@ footer .container {
   padding-left: 1rem;
   font-size: 1rem;
 }
-#contactformulier ::-webkit-input-placeholder { /* Edge */
+#footer #contactformulier ::-webkit-input-placeholder { /* Edge */
     color: white;
     font-weight: bold;
 }
-#contactformulier :-ms-input-placeholder { /* Internet Explorer 10-11 */
+#footer #contactformulier :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: white;
     font-weight: bold;
 }
-#contactformulier ::placeholder {
+#footer #contactformulier ::placeholder {
     color: white;
     opacity: 1;
     font-weight: bold;
 }
-#contactformulier input:focus, #contactformulier textarea:focus {
+#footer #contactformulier input:focus, #contactformulier textarea:focus {
   outline: none;
 }
-
-
-.social-media {
+#footer .social-media {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -165,7 +125,7 @@ footer .container {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.social-media a {
+#footer .social-media a {
   height: 2rem;
   min-height: 34px;
   width: 2rem;
@@ -175,15 +135,15 @@ footer .container {
   justify-content: center;
   align-items: center;
 }
-.social-media img {
+#footer .social-media img {
   height: 100%;
   width: 100%;
 }
-.social-media #instagram-icon {
+#footer .social-media #instagram-icon {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
-.footer-right {
+#footer .footer-right {
   min-width: 12rem;
   width: 25%;
   flex-basis: 25%;
@@ -195,87 +155,95 @@ footer .container {
   height: 100%;
   z-index: 1;
 }
-footer address, .address-title, footer address a, tr, .openingstijden {
+#footer address, .address-title, #footer address a, tr, .openingstijden {
   width: 100%;
 }
-#kantoor {
+#footer #kantoor {
   margin-bottom: 1rem;
 }
-#contact {
+#footer #contact {
   margin-top: 1rem;
 }
-address {
+#footer address {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.address-title {
+#footer .address-title {
   font-weight: bold;
   font-size: 1.2rem;
   padding-bottom: 0.5rem;
 }
-table {
+#footer table {
   font-family: 'Ubuntu', sans-serif;
   width: 100%;
   display: block;
 }
-th {
+#footer th {
   text-align: left;
   padding-right: 1rem;
 }
-.openingstijden {
+#footer .openingstijden {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-
-.copyright-bar {
+#footer .copyright-bar {
   height: 1.5rem;
   width: 100%;
   background-color: black;
   position: relative;
   z-index: 1;
 }
-.copyright-bar .container {
+#footer .copyright-bar .container {
   height: 100%;
   justify-content: flex-start;
   align-items: center;
 }
-.copyright-bar a {
+#footer .copyright-bar a {
   font-size: 0.75rem;
   color: lightblue;
   margin-right: 1rem;
 }
-.copyright-bar a:hover {
+#footer .copyright-bar a:hover {
   color: white;
 }
 
-/* 2k versie */
-@media only screen and (max-width: 2880px) {
-  html {
-    font-size: 38px;
+@media only screen and (max-width: 700px) {
+  #footer .container {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    min-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
-}
-
-/* hd versie */
-@media only screen and (max-width: 1920px) {
-  html {
-    font-size: 25px;
+  #footer .footer-right, .footer-left {
+    width: 100%;
+    flex-basis: 100%;
   }
-}
-
-/* 3/4hd versie */
-@media only screen and (max-width: 1440px) {
-  html {
-    font-size: 19px;
+  #footer #contactformulier .form-div2 {
+    padding-right: 5%;
   }
-}
-
-/* tablet fix */
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 16px;
+  #footer #contactformulier .form-div2 span {
+    margin-bottom: 1rem;
+  }
+  #footer table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  #footer tbody {
+    width: 100%;
+    display: block;
+  }
+  #footer tr {
+    width: 100%;
+  }
+  #footer th {
+    padding-right: 20vw;
+  }
+  #footer .copyright-bar {
+    height: 2.5rem;
   }
 }

@@ -583,40 +583,7 @@ th {
   nav .container ul {
     height: 3rem;
   }
-  footer .container {
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    min-width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .footer-right, .footer-left {
-    width: 100%;
-    flex-basis: 100%;
-  }
-  #contactformulier .form-div2 {
-    padding-right: 5%;
-  }
-  #contactformulier .form-div2 span {
-    margin-bottom: 1rem;
-  }
-  table {
-    table-layout: fixed;
-    width: 100%;
-  }
-  tbody {
-    width: 100%;
-    display: block;
-  }
-  tr {
-    width: 100%;
-  }
-  th {
-    padding-right: 20vw;
-  }
-  .copyright-bar {
-    height: 2.5rem;
-  }
+
   #modal {
     display: none;
   }
