@@ -133,3 +133,15 @@ const getReviews = async () => {
     };
   });
 };
+
+// Get request for footer
+const getFooter = async () => {
+  const xhr= new XMLHttpRequest();
+  xhr.open('GET', './resources/html/footer.html', true);
+  xhr.onreadystatechange= function() {
+    if (this.readyState!==4) return;
+    if (this.status!==200) return; // or whatever error handling you want
+    document.getElementById('y').innerHTML= this.responseText;
+  };
+  xhr.send();
+};
