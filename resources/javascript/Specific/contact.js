@@ -8,16 +8,14 @@ window.onload = function() {
 };
 
 const getHtml = selectedModules => {
-  let i=0;
-  while (i<selectedModules.length) {
+  for (i=0; i<selectedModules.length; i++) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', './resources/html/Modules/'+selectedModules[i]+'.html', true);
     xhr.onreadystatechange= function() {
-      if (xhr.readyState!==4) return;
-      if (xhr.status!==200) return;
-      document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
-      i++;
+      if (xhr.status===200) {
+        document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
       };
+    };
     xhr.send();
   }
 };
