@@ -3,17 +3,19 @@ const modulesToLoad = ['header','footer','modal'];
 
 //Run scripts when page is loaded
 window.onload = function() {
-  getHtml(modulesToLoad);
+  getHtml(modulesToLoad, 0);
   getCss(modulesToLoad);
 };
 
-const getHtml = selectedModules => {
-  let i=0;
+const getHtml = (selectedModules, i) => {
   xhr.open('GET', './resources/html/Modules/'+selectedModules[i]+'.html', true);
   if (xhr.status===200) {
     document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
     i++;
     xhr.send();
+  };
+  if (i<3) {
+    getHtml(modulesToLoad, i);
   };
 };
 
