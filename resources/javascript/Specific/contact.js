@@ -8,6 +8,7 @@ window.onload = function() {
 };
 
 const getHtml = (selectedModules, i) => {
+  const xhr= new XMLHttpRequest();
   xhr.open('GET', './resources/html/Modules/'+selectedModules[i]+'.html', true);
   if (xhr.status===200) {
     document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
