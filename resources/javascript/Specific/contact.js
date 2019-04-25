@@ -6,8 +6,8 @@ window.onload = function() {
   getModules(selectedModules);
 }
 
-const getModules = async selectedModules => {
-  for (i=0; i<selectedModules.length; i++) {
+const getModules = selectedModules => {
+  for (i=0; i<selectedModules.length) {
     const xhr = new XMLHttpRequest();
     console.log('./resources/html/Modules/'+selectedModules[i]+'.html')
     xhr.open('GET', './resources/html/Modules/'+selectedModules[i]+'.html', true);
@@ -22,7 +22,7 @@ const getModules = async selectedModules => {
       document.head.appendChild(link);
     };
 
-    xhr.onreadystatechange= await function() {
+    xhr.onreadystatechange= function() {
       console.log(xhr.readyState)
       if (xhr.readyState!==4) return;
       console.log(xhr.status);
@@ -31,6 +31,7 @@ const getModules = async selectedModules => {
       console.log(i);
       console.log(document.getElementById(selectedModules[i]));
       document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
+      i++;
       };
     xhr.send();
   };
