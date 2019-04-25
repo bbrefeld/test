@@ -3,7 +3,7 @@ const selectedModules = [header,footer,modal];
 
 //Run scripts when page is loaded
 window.onload = function() {
-  getModules();
+  getModules(selectedModules);
 }
 
 const getModules = selectedModules => {
