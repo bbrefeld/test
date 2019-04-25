@@ -143,6 +143,15 @@ const getFooter = async () => {
     if (this.readyState!==4) return;
     if (this.status!==200) return;
     document.getElementsByTagName('footer')[0].innerHTML= this.responseText;
+
+    if (!document.getElementById("footerCSS")) {
+      let link = document.createElement("link");
+      link.id = "footerCSS";
+      link.rel = "stylesheet";
+      link.href = "resources/css/footer.css";
+      document.head.appendChild(link);
+    };
+
   };
   xhr.send();
 };
