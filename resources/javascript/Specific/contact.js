@@ -14,9 +14,7 @@ const getHtml = (selectedModules, i) => {
     document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
     i++;
     xhr.send();
-  };
-  if (i<3) {
-    getHtml(modulesToLoad, i);
+    getHtml(selectedModules, i);
   };
 };
 
