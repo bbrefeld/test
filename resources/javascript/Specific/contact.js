@@ -8,16 +8,13 @@ window.onload = function() {
 };
 
 const getHtml = selectedModules => {
-  for (i=0; i<selectedModules.length; i++) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', './resources/html/Modules/'+selectedModules[i]+'.html', true);
-    xhr.onreadystatechange= function() {
-      if (xhr.status===200) {
-        document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
-      };
-    };
+  let i=0;
+  xhr.open('GET', './resources/html/Modules/'+selectedModules[i]+'.html', true);
+  if (xhr.status===200) {
+    document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
+    i++;
     xhr.send();
-  }
+  };
 };
 
 const getCss = selectedModules => {
