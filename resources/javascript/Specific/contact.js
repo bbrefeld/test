@@ -6,7 +6,7 @@ window.onload = function() {
   getModules(selectedModules);
 }
 
-const getModules = selectedModules => {
+const getModules = async selectedModules => {
   for (i=0; i<selectedModules.length; i++) {
     const xhr = new XMLHttpRequest();
     console.log('./resources/html/Modules/'+selectedModules[i]+'.html')
@@ -22,7 +22,7 @@ const getModules = selectedModules => {
       document.head.appendChild(link);
     };
 
-    xhr.onreadystatechange= function() {
+    xhr.onreadystatechange= await function() {
       console.log(xhr.readyState)
       if (xhr.readyState!==4) return;
       console.log(xhr.status);
