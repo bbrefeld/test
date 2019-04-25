@@ -1,5 +1,5 @@
 //Modules to load
-const selectedModules = [header,footer,modal];
+const selectedModules = ['header','footer','modal'];
 
 //Run scripts when page is loaded
 window.onload = function() {
