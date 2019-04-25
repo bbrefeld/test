@@ -28,6 +28,7 @@ const getModules = selectedModules => {
       console.log(xhr.status);
       if (xhr.status!==200) return;
       console.log(xhr.responseText);
+      console.log(i);
       console.log(document.getElementById(selectedModules[i]));
       document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
       };
