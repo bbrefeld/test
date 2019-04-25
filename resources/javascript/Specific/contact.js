@@ -12,18 +12,22 @@ const getModules = selectedModules => {
     console.log('./resources/html/Modules/'+selectedModules[i]+'.html')
     xhr.open('GET', './resources/html/Modules/'+selectedModules[i]+'.html', true);
     xhr.onreadystatechange= function() {
-      if (this.readyState!==4) return;
-      if (this.status!==200) return;
+      console.log(xhr.readyState)
+      if (xhr.readyState!==4) return;
       console.log(xhr.status);
+      if (xhr.status!==200) return;
+      console.log(selectedModules[i]+"CSS");
       if (!document.getElementById(selectedModules[i]+"CSS")) {
         let link = document.createElement("link");
         link.id = selectedModules[i]+"CSS";
         link.rel = "stylesheet";
         link.href = "resources/css/Modules/"+selectedModules[i]+".css";
+        console.log(link);
         document.head.appendChild(link);
       };
-      document.getElementById(selectedModules[i]).innerHTML= this.responseText;
+      console.log(xhr.responseText);
+      document.getElementById(selectedModules[i]).innerHTML= xhr.responseText;
     };
     xhr.send();
-  }
+  };
 }
