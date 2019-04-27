@@ -3,14 +3,14 @@ const modulesToLoad = ['header','footer','modal'];
 
 //Run scripts when page is loaded
 window.onload = function() {
-  getHtml(modulesToLoad, 0);
+  getHtml(modulesToLoad);
   getCss(modulesToLoad);
 };
 
-const getHtml = (selectedModules, i) => {
+const getHtml = (selectedModules) => {
   const xhr = [];
   for (i=0; i<selectedModules.lengh; i++) {
-    function(i) {
+    (function(i) {
       xhr[i] = new XMLHttpRequest();
       xhr[i].open('GET', './resources/html/Modules/'+selectedModules[i]+'.html', true);
       xhr[i].onreadystatechange= function() {
@@ -20,7 +20,7 @@ const getHtml = (selectedModules, i) => {
         };
       };
       xhr[i].send();
-    };
+    })(i);
   }
 };
 
