@@ -15,7 +15,7 @@ const getHtml = (selectedModules, i) => {
     if (this.status!==200) return;
     document.getElementById(selectedModules[i]).innerHTML= this.responseText;
   };
-  console.log("test");
+  getHtml(modulesToLoad, i+1);
   xhr.send();
 };
 
