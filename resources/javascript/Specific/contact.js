@@ -15,12 +15,11 @@ const getHtml = (selectedModules, i) => {
     if (this.status!==200) return;
     document.getElementById(selectedModules[i]).innerHTML= this.responseText;
   };
-  /*if (document.getElementById(selectedModules[i]).innerHTML.length > 5) {
+  xhr.send();
+  if (document.getElementById(selectedModules[i]).innerHTML.length > 5) {
     i++;
     getHtml(selectedModules, i);
-  }*/
-  xhr.send();
-  console.log("test");
+  }
 };
 
 const getCss = selectedModules => {
