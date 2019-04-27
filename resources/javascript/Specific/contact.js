@@ -2,9 +2,26 @@
 const modulesToLoad = ['header','footer','modal'];
 
 //Run scripts when page is loaded
-window.onload = function() {
-  getHtml2();
-  getCss(modulesToLoad);
+window.onload = function(){
+
+    var f = (function(){
+        var xhr = [], i;
+        for(i = 0; i < 3; i++){ //for loop
+            (function(i){
+                xhr[i] = new XMLHttpRequest();
+                console.log("URLRUNS")
+                url = './resources/html/Modules/'+selectedModules[i]+'.html';
+                xhr[i].open("GET", url, true);
+                xhr[i].onreadystatechange = function(){
+                    if (xhr[i].readyState === 4 && xhr[i].status === 200){
+                        console.log('Response from request ' + i + ' [ ' + xhr[i].responseText + ']');
+                    }
+                };
+                xhr[i].send();
+            })(i);
+        }
+    })();
+
 };
 
 const getHtml = (selectedModules) => {
