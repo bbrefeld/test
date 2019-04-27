@@ -9,7 +9,7 @@ window.onload = function() {
 
 const getHtml = (selectedModules, i) => {
   const xhr= new XMLHttpRequest();
-  xhr.open('GET', './resources/html/'+selectedModules[i]+'.html', true);
+  xhr.open('GET', './resources/html/Modules/'+selectedModules[i]+'.html', true);
   xhr.onreadystatechange= function() {
     if (this.readyState!==4) return;
     if (this.status!==200) return;
