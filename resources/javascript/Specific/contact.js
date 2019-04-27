@@ -10,7 +10,7 @@ window.onload = function(){
             (function(i){
                 xhr[i] = new XMLHttpRequest();
                 console.log("URLRUNS")
-                url = './resources/html/Modules/'+selectedModules[i]+'.html';
+                url = './resources/html/Modules/'+modulesToLoad[i]+'.html';
                 xhr[i].open("GET", url, true);
                 xhr[i].onreadystatechange = function(){
                     if (xhr[i].readyState === 4 && xhr[i].status === 200){
@@ -22,9 +22,11 @@ window.onload = function(){
         }
     })();
 
+    getCss(modulesToLoad);
+
 };
 
-const getHtml = (selectedModules) => {
+/*const getHtml = (selectedModules) => {
   const xhr = [];
   for (i=0; i<selectedModules.lengh; i++) {
     (function(i) {
@@ -39,7 +41,7 @@ const getHtml = (selectedModules) => {
       xhr[i].send();
     })(i);
   }
-};
+};*/
 
 const getCss = selectedModules => {
   for (i=0; i<selectedModules.length; i++) {
@@ -53,7 +55,7 @@ const getCss = selectedModules => {
   }
 };
 
-const getHtml2 = () => {
+/*const getHtml2 = () => {
   const f = (function(){
     const xhr = [], i;
     for(i = 0; i < 3; i++){ //for loop
@@ -69,4 +71,4 @@ const getHtml2 = () => {
       })(i);
     }
   })();
-};
+};*/
