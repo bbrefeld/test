@@ -6,7 +6,7 @@ window.onload = function(){
 
     var f = (function(){
         var xhr = [], i;
-        for(i = 0; i < 3; i++){ //for loop
+        for(i = 0; i < modulesToLoad.length; i++){ //for loop
             (function(i){
                 xhr[i] = new XMLHttpRequest();
                 console.log("URLRUNS")
@@ -14,7 +14,7 @@ window.onload = function(){
                 xhr[i].open("GET", url, true);
                 xhr[i].onreadystatechange = function(){
                     if (xhr[i].readyState === 4 && xhr[i].status === 200){
-                        console.log('Response from request ' + i + ' [ ' + xhr[i].responseText + ']');
+                        document.getElementById(selectedModules[i]).innerHTML= this.responseText;
                     }
                 };
                 xhr[i].send();
