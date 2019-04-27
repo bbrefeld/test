@@ -15,6 +15,7 @@ const getHtml = (selectedModules, i) => {
     if (this.status!==200) return;
     document.getElementById(selectedModules[i]).innerHTML= this.responseText;
   };
+  xhr.send();
 };
 
 const getCss = selectedModules => {
