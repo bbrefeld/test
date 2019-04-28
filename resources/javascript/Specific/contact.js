@@ -14,7 +14,7 @@ window.onload = function(){
                 xhr[i].open("GET", url, true);
                 xhr[i].onreadystatechange = function(){
                     if (xhr[i].readyState === 4 && xhr[i].status === 200){
-                        document.getElementById(selectedModules[i]).innerHTML= this.responseText;
+                        document.getElementById(modulesToLoad[i]).innerHTML= this.responseText;
                     }
                 };
                 xhr[i].send();
