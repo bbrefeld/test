@@ -3,21 +3,21 @@ const modulesToLoad = ['header','footer','modal'];
 
 //Run scripts when page is loaded
 window.onload = function(){
-    getHtml();
+    getHtml(modulesToLoad);
     getCss(modulesToLoad);
 };
 
-const getHtml = () => {
-  (function(){
+const getHtml = selectedModules => {
+  (function() {
     let xhr = [], i;
-    for(i = 0; i < modulesToLoad.length; i++) {
+    for(i = 0; i < selectedModules.length; i++) {
       (function(i) {
         xhr[i] = new XMLHttpRequest();
-        url = './resources/html/Modules/'+modulesToLoad[i]+'.html';
+        url = './resources/html/Modules/'+selectedModules[i]+'.html';
         xhr[i].open("GET", url, true);
         xhr[i].onreadystatechange = function(){
           if (xhr[i].readyState === 4 && xhr[i].status === 200) {
-            document.getElementById(modulesToLoad[i]).innerHTML= this.responseText;
+            document.getElementById(selectedModules[i]).innerHTML= this.responseText;
           }
         };
         xhr[i].send();
