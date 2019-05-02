@@ -1,0 +1,192 @@
+#indexMain hr {
+  width: 100%;
+  opacity: 0;
+  height: 0px;
+}
+#indexMain .colored-svg {
+  background-color: #2a3443;
+}
+#indexMain  {
+  width: 100%;
+}
+#indexMain section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#indexMain section .container {
+  margin-bottom: 8rem;
+}
+#indexMain section h2, #indexMain section p {
+  max-width: 35rem;
+  text-align: center;
+}
+#indexMain h2 {
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+#indexMain .underline {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #368ff4;
+  border-radius: 10px;
+  margin: 1rem 0px;
+}
+#indexMain .diensten .container .diensten-lijst {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+#indexMain .diensten .container .diensten-lijst figure {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 31%;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 5px;
+  color: white;
+  box-sizing: border-box;
+}
+#indexMain .diensten .container .diensten-lijst figure img {
+  width: 8vw;
+  height: 8vw;
+  margin-bottom: 1rem;
+}
+
+#indexMain .diensten .container .diensten-lijst figure h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#indexMain #dienst1 {
+  background-color: #368ff4;
+}
+#indexMain #dienst2 {
+  background-color: #3644af;
+  margin: 0px 0.5rem;
+}
+#indexMain #dienst3 {
+  background-color: #2a3443;
+}
+#indexMain .diensten .container .diensten-lijst figure p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+#indexMain .belofte {
+  flex-wrap: wrap;
+}
+#indexMain .belofte .container {
+  margin-bottom: 3rem;
+}
+
+#indexMain .projecten {
+  background-image: url(../images/backgrounds/project-bg.png);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #2a3443;
+  color: white;
+}
+#indexMain .projecten .container {
+  margin-top: 3rem;
+}
+#indexMain .projecten-groot, #indexMain .projecten-klein {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+#indexMain .projecten-groot figure {
+  width: 23%;
+}
+#indexMain .projecten-groot figure img {
+  width: 100%;
+  background-color: gray;
+}
+#indexMain .projecten-groot figure figcaption, #indexMain .projecten-klein figure figcaption {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+#indexMain .projecten-klein {
+  width: 75%;
+}
+#indexMain .projecten-klein figure {
+  width: 23%;
+}
+#indexMain .projecten-klein figure img {
+  width: 100%;
+  background-color: green;
+}
+
+/* Very small screens */
+@media only screen and (max-width: 700px) {
+  #indexMain .projecten {
+    background-image: none;
+  }
+  #indexMain .projecten-groot figure {
+    width: 100%
+  }
+  #indexMain .projecten-klein {
+    display: none;
+  }
+  #indexMain .projecten-groot {
+    flex-wrap: wrap;
+  }
+  #indexMain .projecten-groot figure figcaption {
+    margin-bottom: 2rem;
+  }
+  #indexMain #project-groot3, #indexMain #project-groot4 {
+    display: none;
+  }
+}
+
+/* tablet version 1 */
+@media (max-aspect-ratio: 5/4) and (max-width: 1200px) and (min-width: 600px) {
+  #indexMain .projecten-klein {
+    display: none;
+  }
+  #indexMain .projecten-groot {
+    flex-wrap: wrap;
+  }
+  #indexMain .projecten-groot figure {
+    width: 46%
+  }
+  #indexMain .projecten-groot figure figcaption {
+    margin-bottom: 2rem;
+  }
+}
+
+/* tablet version 2 */
+@media only screen and (max-width: 1200px) {
+  #indexMain .diensten .container .diensten-lijst {
+    justify-content: center;
+  }
+  #indexMain .diensten .container .diensten-lijst figure {
+    width: 75%;
+    margin-top: 3rem;
+    border-radius: 10px;
+  }
+  #indexMain #dienst2 {
+    margin: 0px;
+    margin-top: 3rem;
+  }
+}
+
+/* mobile version */
+@media only screen and (max-width: 900px) {
+  #indexMain .diensten .container .diensten-lijst figure {
+    width: 100%;
+    margin-top: 3rem;
+    border-radius: 10px;
+  }
+}
