@@ -28,7 +28,7 @@
   justify-content: center;
   flex-wrap: wrap;
   background-color: #3644af;
-  background-image: url(../images/backgrounds/section-bg-hero8.png),radial-gradient(circle at center,#3644af 38%,#368ff4 100%);
+  background-image: url(../../images/backgrounds/section-bg-hero8.png),radial-gradient(circle at center,#3644af 38%,#368ff4 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
