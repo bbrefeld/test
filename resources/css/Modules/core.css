@@ -10,6 +10,11 @@ a {
 p, a, span, figcaption {
   font-family: 'Ubuntu', sans-serif;
 }
+hr {
+  width: 100%;
+  opacity: 0;
+  height: 0px;
+}
 body {
   width: 100%;
   display: flex;
