@@ -1,0 +1,241 @@
+#over-onsMain .diensten {
+  padding-top: 1.5rem;
+}
+#over-onsMain .diensten .container {
+  margin-bottom: 4rem;
+}
+#over-onsMain .diensten .container .diensten-lijst {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+#over-onsMain .diensten .container .diensten-lijst figure {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 31%;
+  padding: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 0.35rem;
+  color: white;
+  box-sizing: border-box;
+  background-blend-mode: overlay;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#over-onsMain .diensten .container .diensten-lijst figure img {
+  width: 8vw;
+  height: 8vw;
+  margin-bottom: 1rem;
+}
+#over-onsMain .diensten .container .diensten-lijst figure h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#over-onsMain #dienst1 {
+  background-color: #368ff4;
+  background-image: url(../../images/backgrounds/over-ons-bckg1.jpg);
+}
+#over-onsMain #dienst2 {
+  background-color: #3644af;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-image: url(../../images/backgrounds/over-ons-bckg3.jpg);
+}
+#over-onsMain #dienst3 {
+  background-color: #2a3443;
+  background-image: url(../../images/backgrounds/over-ons-bckg2.jpg);
+}
+#over-onsMain #dienst4 {
+  background-color: #31C56F;
+  background-image: url(../../images/backgrounds/over-ons-bckg2.jpg);
+}
+#over-onsMain #dienst5 {
+  background-color: #FFA03B;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-image: url(../../images/backgrounds/over-ons-bckg1.jpg);
+}
+#over-onsMain #dienst6 {
+  background-color: #EB514E;
+  background-image: url(../../images/backgrounds/over-ons-bckg3.jpg);
+}
+#over-onsMain .diensten .container .diensten-lijst figure p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+#over-onsMain .statistieken {
+  background-color: #2a3443;
+  color: white;
+}
+#over-onsMain .statistieken .container {
+  display: flex;
+  margin-bottom: 0px;
+  padding-bottom: 8rem;
+}
+#over-onsMain .statistieken .container .statistieken-lijst {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#over-onsMain .statistieken .container .statistieken-lijst figure {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  background-color: red;
+  width: 15.4vw;
+  height: 14vw;
+  border-radius: 0.35rem;
+}
+#over-onsMain .statistieken .container .statistieken-lijst figure span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0.35rem;
+}
+#over-onsMain .statistieken .container .statistieken-lijst figure p {
+  color: rgba(255, 255, 255, 0.7);
+}
+#over-onsMain #statistiek1 {
+  background-color: #0c71c3;
+}
+#over-onsMain #statistiek2 {
+  background-color: #4f9df5;
+}
+#over-onsMain #statistiek3 {
+  background-color: #EB514E;
+}
+#over-onsMain #statistiek4 {
+  background-color: #354154;
+}
+#over-onsMain .blank-section {
+  background-color: #f3f5f9;
+}
+#over-onsMain .blank-section .container {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  margin-bottom: 0px;
+}
+#over-onsMain .blank-section .container .employees {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 3rem;
+}
+#over-onsMain .blank-section .container .employees div {
+  width: 31%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1.8;
+}
+#over-onsMain .blank-section .container .employees div img {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  width: 50%;
+}
+#over-onsMain .blank-section .container .employees div p {
+  width: 80%;
+  text-align: center;
+}
+#over-onsMain .blank-section .container .employees div span {
+  padding-bottom: 3rem;
+  text-align: center;
+  font-weight: 400;
+}
+#over-onsMain .blank-section .container .employees div .names {
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 0px;
+}
+#over-onsMain .text-section {
+  background-color: #2a3443;
+}
+#over-onsMain .text-section .container {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  margin-bottom: 0px;
+}
+#over-onsMain .text-section .container img {
+  width: 12.5%;
+}
+#over-onsMain .text-section .container p {
+  color: white;
+  line-height: 1.8rem;
+  font-weight: bold;
+}
+
+/* flex change 1 */
+@media only screen and (max-width: 1000px) {
+  #over-onsMain .diensten .container .diensten-lijst figure {
+    width: 47%;
+    margin-bottom: 2rem;
+  }
+  #over-onsMain #dienst2, #over-onsMain #dienst5 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #over-onsMain .statistieken .container {
+    padding-bottom: 2rem;
+  }
+  #over-onsMain .statistieken .container .statistieken-lijst {
+    flex-wrap: wrap;
+    height: 30vw;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+  #over-onsMain .statistieken .container .statistieken-lijst figure {
+    width: 30.8vw;
+    height: 12vw;
+  }
+  #over-onsMain .blank-section .container .employees {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #over-onsMain .blank-section .container .employees div {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  #over-onsMain .blank-section .container .employees div img {
+    width: 20%;
+    padding-top: 1rem;
+  }
+  #over-onsMain .blank-section .container .employees div p {
+    box-sizing: border-box;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+  }
+  #over-onsMain .blank-section .container .employees div span {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #over-onsMain .diensten .container .diensten-lijst figure {
+    width: 100%;
+  }
+  #over-onsMain .statistieken .container .statistieken-lijst {
+    height: auto;
+  }
+  #over-onsMain .statistieken .container .statistieken-lijst figure {
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 2rem;
+  }
+}
