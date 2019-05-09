@@ -5,7 +5,7 @@ const modulesToLoad = [];
 window.onload = async function(){
   await getIDs();
   await getHtml(modulesToLoad);
-  changeNavLink(modulesToLoad[1]);
+  await changeNavLink(modulesToLoad[1]);
 };
 
 //Get all ID's in the HTML File
