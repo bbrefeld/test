@@ -33,4 +33,14 @@ const getHtml = selectedModules => {
       })(i);
     }
   })();
+  const test = document.getElementById("over-onsMain");
+  test.onchange = changeNavLink(modulesToLoad[1]);
 };
+
+const changeNavLink = mainID => {
+  const activeID = mainID.replace("Main","") + "Nav";
+  console.log(activeID);
+  let activeNavButton = document.getElementById("over-onsNav");
+  console.log(activeNavButton);
+  activeNavButton.style.color = "#368ff4";
+}
