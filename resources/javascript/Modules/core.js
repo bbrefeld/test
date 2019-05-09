@@ -5,8 +5,6 @@ const modulesToLoad = [];
 window.onload = async function(){
   await getIDs();
   await getHtml(modulesToLoad);
-  if (document.getElementById("over-onsNav")) {
-    console.log("I'm alive");
   };
 };
 
@@ -16,6 +14,8 @@ const getIDs = () => {
   for (i=0; i<ElementsWithId.length; i++) {
     modulesToLoad.push(ElementsWithId[i].id);
   };
+  const test = document.getElementById("over-onsMain");
+  test.onchange = console.log("test");
 };
 
 // Get HTML code from selected modules
