@@ -5,6 +5,7 @@ const modulesToLoad = [];
 window.onload = async function(){
   await getIDs();
   getHtml(modulesToLoad);
+  changeNavLink(modulesToLoad[1]);
 };
 
 //Get all ID's in the HTML File
@@ -36,5 +37,7 @@ const getHtml = selectedModules => {
 };
 
 const changeNavLink = mainID => {
-  const currentPage = mainID.replace("Main","");
+  const activeID = mainID.replace("Main","") + "Nav";
+  let activeNavButton = document.getElementById(activeID);
+  activeNavButton.style.color = "#368ff4";
 }
