@@ -27,7 +27,7 @@ const getHtml = (selectedModules, callback) => {
         xhr[i].onreadystatechange = function(){
           if (xhr[i].readyState === 4 && xhr[i].status === 200) {
             document.getElementById(selectedModules[i]).innerHTML= this.responseText;
-            if (i===3) {
+            if (i===selectedModules.length) {
               callback(modulesToLoad[1]);
             }
           }
