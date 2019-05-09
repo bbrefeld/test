@@ -27,13 +27,15 @@ const getHtml = (selectedModules, callback) => {
         xhr[i].onreadystatechange = function(){
           if (xhr[i].readyState === 4 && xhr[i].status === 200) {
             document.getElementById(selectedModules[i]).innerHTML= this.responseText;
+            if (i===4) {
+              callback(modulesToLoad[1]);
+            }
           }
         };
         xhr[i].send();
       })(i);
     }
   })();
-  callback(modulesToLoad[1]);
 };
 
 const changeNavLink = mainID => {
