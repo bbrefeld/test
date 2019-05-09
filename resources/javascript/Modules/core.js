@@ -13,8 +13,6 @@ const getIDs = () => {
   for (i=0; i<ElementsWithId.length; i++) {
     modulesToLoad.push(ElementsWithId[i].id);
   };
-  const test = document.getElementById("over-onsMain");
-  test.onchange = changeNavLink(modulesToLoad[1]);
 };
 
 // Get HTML code from selected modules
@@ -36,11 +34,3 @@ const getHtml = selectedModules => {
     }
   })();
 };
-
-const changeNavLink = mainID => {
-  const activeID = mainID.replace("Main","") + "Nav";
-  console.log(activeID);
-  let activeNavButton = document.getElementById("over-onsNav");
-  console.log(activeNavButton);
-  activeNavButton.style.color = "#368ff4";
-}
