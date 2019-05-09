@@ -4,7 +4,7 @@ const modulesToLoad = [];
 //Run scripts when page is loaded
 window.onload = async function(){
   await getIDs();
-  getHtml(modulesToLoad);
+  await getHtml(modulesToLoad);
 };
 
 //Get all ID's in the HTML File
@@ -33,8 +33,10 @@ const getHtml = selectedModules => {
       })(i);
     }
   })();
-  const test = document.getElementById("over-onsMain");
-  test.onchange = changeNavLink(modulesToLoad[1]);
+  if (document.getElementById("over-onsNav")) {
+    console.log("test");
+    changeNavLink(modulesToLoad[1]);
+  }
 };
 
 const changeNavLink = mainID => {
