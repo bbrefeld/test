@@ -41,7 +41,9 @@ const getHtml = (selectedModules, callback) => {
 const changeNavLink = mainID => {
   const activeID = mainID.replace("Main","") + "Nav";
   console.log(activeID);
-  if (activeID !== "indexNav" && activeID !== "footerNav") {
+  if (activeID === "footerNav") {
+    document.getElementById("contactNav").children[0].style.color = "#368ff4"
+  } else if (activeID !== "indexNav") {
     document.getElementById(activeID).children[0].style.color = "#368ff4"
   };
 }
