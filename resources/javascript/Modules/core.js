@@ -27,19 +27,17 @@ const getHtml = (selectedModules, callback) => {
         xhr[i].onreadystatechange = function(){
           if (xhr[i].readyState === 4 && xhr[i].status === 200) {
             document.getElementById(selectedModules[i]).innerHTML= this.responseText;
-            callback(modulesToLoad[1]);
           }
         };
         xhr[i].send();
       })(i);
     }
+    callback(modulesToLoad[1]);
   })();
 };
 
 const changeNavLink = mainID => {
   const activeID = mainID.replace("Main","") + "Nav";
   console.log(activeID);
-  let activeNavButton = document.getElementById("over-onsNav");
-  console.log(activeNavButton);
-  activeNavButton.style.color = "#368ff4";
+  document.getElementById("over-onsNav").style.color = "#368ff4";
 }
