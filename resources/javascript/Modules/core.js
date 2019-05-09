@@ -41,5 +41,7 @@ const getHtml = (selectedModules, callback) => {
 const changeNavLink = mainID => {
   const activeID = mainID.replace("Main","") + "Nav";
   console.log(activeID);
-  console.log(document.getElementById("over-onsNav"));
+  if (activeID !== "indexNav" && activeID !== "footerNav") {
+    document.getElementById(activeID).children[0].style.color = "#368ff4"
+  };
 }

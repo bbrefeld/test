@@ -51,9 +51,9 @@
   width: 100%;
   text-align: center;
 }
-#header nav .container ul .current-page {
+/*#header nav .container ul .current-page {
   color: #368ff4;
-}
+}*/
 #header nav .container ul li:hover {
   opacity: 0.7;
 }
