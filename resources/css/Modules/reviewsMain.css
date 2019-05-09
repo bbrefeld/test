@@ -1,44 +1,44 @@
-#reviewMain .reviews {
+#reviewsMain .reviews {
   height: 20rem;
 }
-#reviewMain .currentStats {
+#reviewsMain .currentStats {
   padding-bottom: 5rem;
 }
-#reviewMain .currentStats figure {
+#reviewsMain .currentStats figure {
   position: relative;
 }
-#reviewMain .currentStats .full, #reviewMain .currentStats .empty {
+#reviewsMain .currentStats .full, #reviewsMain .currentStats .empty {
   height: 2rem;
 }
-#reviewMain .currentStats div img {
+#reviewsMain .currentStats div img {
   height: 100%;
 }
-#reviewMain .empty img {
+#reviewsMain .empty img {
   filter: invert(86%) sepia(9%) saturate(21%) hue-rotate(10deg) brightness(100%) contrast(86%);
 }
-#reviewMain .full {
+#reviewsMain .full {
   position: absolute;
   top: 0;
   width: 75%;
   overflow: hidden;
 }
-#reviewMain .full img {
+#reviewsMain .full img {
   filter: invert(59%) sepia(73%) saturate(1397%) hue-rotate(1deg) brightness(106%) contrast(102%);
 }
 
-#reviewMain #reviewScore {
+#reviewsMain #reviewScore {
   unicode-bidi: bidi-override;
   direction: rtl;
 }
-#reviewMain #reviewScore input:hover ~ label {
+#reviewsMain #reviewScore input:hover ~ label {
   filter: invert(59%) sepia(73%) saturate(1397%) hue-rotate(1deg) brightness(106%) contrast(102%);
 }
-#reviewMain .currentStats .container p {
+#reviewsMain .currentStats .container p {
   width: 100%;
   text-align: center;
 }
 
-#reviewMain .currentReviews {
+#reviewsMain .currentReviews {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@
   overflow: hidden;
 }
 
-#reviewMain .visibleReviews {
+#reviewsMain .visibleReviews {
   width: 100%;
   height: 15rem;
   display: flex;
@@ -61,7 +61,7 @@
   box-sizing: border-box;
   z-index: 1;
 }
-#reviewMain .visibleReviews div {
+#reviewsMain .visibleReviews div {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -70,26 +70,26 @@
   height: 80%;
   margin: 0 1% 0 1%;
 }
-#reviewMain .visibleReviews div p {
+#reviewsMain .visibleReviews div p {
   height: 80%;
   width: 100%;
   text-align: center;
 }
-#reviewMain .visibleReviews div span {
+#reviewsMain .visibleReviews div span {
   height: 10%;
   width: 100%;
   text-align: center;
 }
 
-#reviewMain .visibleReviews-translate-next {
+#reviewsMain .visibleReviews-translate-next {
   transition: left 0.5s ease-out;
   left: 20%;
 }
-#reviewMain .visibleReviews-translate-prev {
+#reviewsMain .visibleReviews-translate-prev {
   transition: left 0.5s ease-out;
   left: -20%;
 }
-#reviewMain #reviewOverlay1, #reviewMain #reviewOverlay2 {
+#reviewsMain #reviewOverlay1, #reviewsMain #reviewOverlay2 {
   position: relative;
   bottom: 15rem;
   background-color: white;
@@ -100,54 +100,54 @@
   display: flex;
   align-items: center;
 }
-#reviewMain #reviewOverlay1 {
+#reviewsMain #reviewOverlay1 {
   margin-left: 0px;
   margin-right: auto;
   border-right: 1px solid blue;
   justify-content: flex-end;
 }
-#reviewMain #reviewOverlay2{
+#reviewsMain #reviewOverlay2{
   margin-left: auto;
   margin-right: 0px;
   border-left: 1px solid blue;
   justify-content: flex-start;
 }
 
-#reviewMain #reviewPrev, #reviewMain #reviewNext {
+#reviewsMain #reviewPrev, #reviewsMain #reviewNext {
   font-size: 2rem;
   color: black;
   padding: 0.5rem;
 }
-#reviewMain #reviewPrev:hover, #reviewMain #reviewNext:hover {
+#reviewsMain #reviewPrev:hover, #reviewsMain #reviewNext:hover {
   background-color: lightgray;
 }
 
-#reviewMain .writeReviews form {
+#reviewsMain .writeReviews form {
   width: 70%;
 }
-#reviewMain #reviewInput {
+#reviewsMain #reviewInput {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-#reviewMain #reviewInput #reviewNaam, #reviewMain #reviewInput #reviewTitel {
+#reviewsMain #reviewInput #reviewNaam, #reviewsMain #reviewInput #reviewTitel {
   width: 50%;
 }
-#reviewMain #reviewNaam {
+#reviewsMain #reviewNaam {
   padding-right: 1%;
   box-sizing: border-box;
 }
-#reviewMain #reviewScore {
+#reviewsMain #reviewScore {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-#reviewMain #reviewScore input {
+#reviewsMain #reviewScore input {
   display: none;
 }
-#reviewMain #reviewScore label {
+#reviewsMain #reviewScore label {
   display: block;
   height: 3rem;
   width: 3rem;
@@ -156,7 +156,7 @@
   background-image: url("../images/icons/star.svg");
   filter: invert(86%) sepia(9%) saturate(21%) hue-rotate(10deg) brightness(100%) contrast(86%);
 }
-#reviewMain #reviewInput #reviewNaam input, #reviewMain #reviewInput #reviewTextarea, #reviewMain #reviewInput #reviewTextarea textarea {
+#reviewsMain #reviewInput #reviewNaam input, #reviewsMain #reviewInput #reviewTextarea, #reviewsMain #reviewInput #reviewTextarea textarea {
   width: 100%;
   box-sizing: border-box;
 }
