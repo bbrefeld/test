@@ -5,7 +5,6 @@ const modulesToLoad = [];
 window.onload = async function(){
   await getIDs();
   await getHtml(modulesToLoad);
-  await changeNavLink(modulesToLoad[1]);
   if (document.getElementById("over-onsNav")) {
     console.log("I'm alive");
   };
