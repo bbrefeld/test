@@ -4,7 +4,7 @@ const modulesToLoad = [];
 //Run scripts when page is loaded
 window.onload = async function(){
   await getIDs();
-  await getHtml(modulesToLoad);
+  await getHtml(modulesToLoad, changeNavLink);
 };
 
 //Get all ID's in the HTML File
@@ -16,7 +16,7 @@ const getIDs = () => {
 };
 
 // Get HTML code from selected modules
-const getHtml = selectedModules => {
+const getHtml = (selectedModules, callback) => {
   (function() {
     let xhr = [], i;
     for(i = 0; i < selectedModules.length; i++) {
@@ -27,16 +27,13 @@ const getHtml = selectedModules => {
         xhr[i].onreadystatechange = function(){
           if (xhr[i].readyState === 4 && xhr[i].status === 200) {
             document.getElementById(selectedModules[i]).innerHTML= this.responseText;
+            callback(modulesToLoad[1]);
           }
         };
         xhr[i].send();
       })(i);
     }
   })();
-  if (document.getElementById("over-onsNav")) {
-    console.log("test");
-    changeNavLink(modulesToLoad[1]);
-  }
 };
 
 const changeNavLink = mainID => {
