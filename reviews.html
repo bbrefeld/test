@@ -4,8 +4,12 @@
     <meta charset="utf-8">
 
     <!-- Linking CSS -->
-    <link href="resources/css/reset.css" type="text/css" rel="stylesheet">
-    <link href="resources/css/reviews.css" type="text/css" rel="stylesheet">
+    <link href="resources/css/Modules/reset.css" type="text/css" rel="stylesheet">
+    <link href="resources/css/Modules/core.css" type="text/css" rel="stylesheet">
+    <link href="resources/css/Modules/header.css" type="text/css" rel="stylesheet">
+    <link href="resources/css/Modules/reviewsMain.css" type="text/css" rel="stylesheet">
+    <link href="resources/css/Modules/footer.css" type="text/css" rel="stylesheet">
+    <link href="resources/css/Modules/modal.css" type="text/css" rel="stylesheet">
 
     <!-- Enabling media queries -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,134 +20,20 @@
   </head>
 
   <body>
-    <header>
-      <address class="top-adress">
-        <div class="container">
-          <a href="tel:=+31681289350">
-            <figure>
-              <img src="resources/images/icons/phone-receiver.png" alt="telefoon icoon"/>
-              <figcaption>+31 6 81 28 93 50</figcaption>
-            </figure>
-          </a>
-          <a href="mailto:info@brefeld-computers.com">
-            <figure>
-              <img src="resources/images/icons/email-envelope.png" alt="mail icoon"/>
-              <figcaption>info@brefeld-computers.com</figcaption>
-            </figure>
-          </a>
-        </div>
-      </address>
-
-      <nav>
-        <div class="container">
-          <ul>
-            <a href="./index.html"><li>Home</li></a>
-            <a href="#"><li class="current-page">Reviews</li></a>
-            <a id="nav-img" href="#"><li><img src="resources/images/logos/logo.png" alt="Logo Brefeld Computers"/></li></a>
-            <a href="./over-ons.html"><li>Over ons</li></a>
-            <a href="#"><li>Contact</li></a>
-          </ul>
-        </div>
-      </nav>
+    <header id="header">
     </header>
 
-    <main>
-      <section class="currentStats">
-        <div class="container">
-          <figure>
-            <div class="empty">
-              <img src="resources/images/icons/star-full.svg" alt="lege sterren rating"/>
-            </div>
-            <div class="full">
-              <img src="resources/images/icons/star-full.svg" alt="gevulde sterren rating"/>
-            </div>
-          </figure>
-          <p><span id="numberOfReviews">x</span> mensen hebben ons gemiddeld <span id="averageRating">y</span> sterren gegeven voor onze service</p>
-        </div>
-      </section>
-
-      <section class="currentReviews">
-        <div class="visibleReviews">
-          <div class="review">
-            <p>There was a problem loading reviews</p>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="review">
-            <p>There was a problem loading reviews</p>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="review">
-            <p>There was a problem loading reviews</p>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="review">
-            <p>There was a problem loading reviews</p>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="review">
-            <p>There was a problem loading reviews</p>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div id="reviewOverlay1">
-          <a id="reviewPrev">&#10094;</a>
-        </div>
-        <div id="reviewOverlay2">
-          <a id="reviewNext">&#10095;</a>
-        </div>
-
-
-      </section>
-
-      <section class="writeReviews">
-        <div id="reviewModal" class="container">
-          <form target="_blank" method="post" action="http://localhost:8888/review">
-            <div id="reviewInput">
-              <div  id="reviewNaam"><input type="text" name="name" placeholder="Naam" required></div><br>
-              <div id="reviewScore">
-                <input id="givenStar5" type="radio" name="rating" value="5" class="hide"/>
-                <label for="givenStar5"></label>
-                <input id="givenStar4" type="radio" name="rating" value="4" class="hide"/>
-                <label for="givenStar4"></label>
-                <input id="givenStar3" type="radio" name="rating" value="3" class="hide"/>
-                <label for="givenStar3"></label>
-                <input id="givenStar2" type="radio" name="rating" value="2" class="hide"/>
-                <label for="givenStar2"></label>
-                <input id="givenStar1" type="radio" name="rating" value="1" class="hide"/>
-                <label for="givenStar1"></label>
-              </div>
-              <div  id="reviewTextarea"><textarea name="reviewContent" placeholder="review" required></textarea></div><br>
-              <input class="submit" type="submit" value="VERZENDEN">
-            </form>
-          </div>
-        </div>
-      </section>
+    <main id="reviewsMain">
     </main>
 
-    <footer>
+    <footer id="footer">
     </footer>
 
-
-
     <div id="modal">
-      <div id="side-social-media">
-        <a href="#"><img  id="topright" src="resources/images/social-media/facebooksq.png" alt="Facebook icoon"></a>
-        <a href="#"><img src="resources/images/social-media/instagramsq.png" alt="Instagram icoon"></a>
-        <a href="#"><img id="bottomright" src="resources/images/social-media/linkedinsq.png" alt="LinkedIn icoon"></a>
-      </div>
     </div>
   </body>
 
+  <script src="resources/javascript/Modules/core.js"></script>
   <script src="resources/javascript/reviews.js"></script>
 
 </html>
