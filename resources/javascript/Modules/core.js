@@ -32,12 +32,12 @@ const getHtml = (selectedModules, callback) => {
         xhr[i].send();
       })(i);
     }
-    callback(modulesToLoad[1]);
   })();
+  callback(modulesToLoad[1]);
 };
 
 const changeNavLink = mainID => {
   const activeID = mainID.replace("Main","") + "Nav";
   console.log(activeID);
-  document.getElementById("over-onsNav").style.color = "#368ff4";
+  console.log(document.getElementById("over-onsNav"));
 }
