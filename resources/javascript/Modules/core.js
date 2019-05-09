@@ -14,7 +14,7 @@ const getIDs = () => {
     modulesToLoad.push(ElementsWithId[i].id);
   };
   const test = document.getElementById("over-onsMain");
-  test.onchange = console.log("test");
+  test.onchange = changeNavLink(modulesToLoad[1]);
 };
 
 // Get HTML code from selected modules
