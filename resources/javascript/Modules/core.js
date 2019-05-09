@@ -4,7 +4,7 @@ const modulesToLoad = [];
 //Run scripts when page is loaded
 window.onload = async function(){
   await getIDs();
-  await getHtml(modulesToLoad);
+  getHtml(modulesToLoad);
 };
 
 //Get all ID's in the HTML File
