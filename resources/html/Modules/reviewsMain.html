@@ -1,80 +1,95 @@
-<section class="currentStats">
-  <div class="container">
-    <figure>
-      <div class="empty">
-        <img src="resources/images/icons/star-full.svg" alt="lege sterren rating"/>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title></title>
+    <link href="../../css/Modules/reset.css" type="text/css" rel="stylesheet">
+    <link href="../../css/Modules/core.css" type="text/css" rel="stylesheet">
+    <link href="../../css/Modules/reviewsMain.css" type="text/css" rel="stylesheet">
+  </head>
+  <body id="reviewsMain">
+    <section class="currentStats">
+      <div class="container">
+        <figure>
+          <div class="empty">
+            <img src="../../images/icons/star-full.svg" alt="lege sterren rating"/>
+          </div>
+          <div class="full">
+            <img src="../../images/icons/star-full.svg" alt="gevulde sterren rating"/>
+          </div>
+        </figure>
+        <p><span id="numberOfReviews">x</span> mensen hebben ons gemiddeld <span id="averageRating">y</span> sterren gegeven voor onze service</p>
       </div>
-      <div class="full">
-        <img src="resources/images/icons/star-full.svg" alt="gevulde sterren rating"/>
-      </div>
-    </figure>
-    <p><span id="numberOfReviews">x</span> mensen hebben ons gemiddeld <span id="averageRating">y</span> sterren gegeven voor onze service</p>
-  </div>
-</section>
+    </section>
 
-<section class="currentReviews">
-  <div class="visibleReviews">
-    <div class="review">
-      <p>There was a problem loading reviews</p>
-      <span></span>
-      <span></span>
-    </div>
-
-    <div class="review">
-      <p>There was a problem loading reviews</p>
-      <span></span>
-      <span></span>
-    </div>
-
-    <div class="review">
-      <p>There was a problem loading reviews</p>
-      <span></span>
-      <span></span>
-    </div>
-
-    <div class="review">
-      <p>There was a problem loading reviews</p>
-      <span></span>
-      <span></span>
-    </div>
-
-    <div class="review">
-      <p>There was a problem loading reviews</p>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <div id="reviewOverlay1">
-    <a id="reviewPrev">&#10094;</a>
-  </div>
-  <div id="reviewOverlay2">
-    <a id="reviewNext">&#10095;</a>
-  </div>
-
-
-</section>
-
-<section class="writeReviews">
-  <div id="reviewModal" class="container">
-    <form target="_blank" method="post" action="http://localhost:8888/review">
-      <div id="reviewInput">
-        <div  id="reviewNaam"><input type="text" name="name" placeholder="Naam" required></div><br>
-        <div id="reviewScore">
-          <input id="givenStar5" type="radio" name="rating" value="5" class="hide"/>
-          <label for="givenStar5"></label>
-          <input id="givenStar4" type="radio" name="rating" value="4" class="hide"/>
-          <label for="givenStar4"></label>
-          <input id="givenStar3" type="radio" name="rating" value="3" class="hide"/>
-          <label for="givenStar3"></label>
-          <input id="givenStar2" type="radio" name="rating" value="2" class="hide"/>
-          <label for="givenStar2"></label>
-          <input id="givenStar1" type="radio" name="rating" value="1" class="hide"/>
-          <label for="givenStar1"></label>
+    <section class="currentReviews">
+      <div class="visibleReviews">
+        <div class="review">
+          <p>There was a problem loading reviews</p>
+          <span></span>
+          <span></span>
         </div>
-        <div  id="reviewTextarea"><textarea name="reviewContent" placeholder="review" required></textarea></div><br>
-        <input class="submit" type="submit" value="VERZENDEN">
-      </form>
-    </div>
-  </div>
-</section>
+
+        <div class="review">
+          <p>There was a problem loading reviews</p>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="review">
+          <p>There was a problem loading reviews</p>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="review">
+          <p>There was a problem loading reviews</p>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="review">
+          <p>There was a problem loading reviews</p>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="reviewOverlay1">
+        <a id="reviewPrev">&#10094;</a>
+      </div>
+      <div id="reviewOverlay2">
+        <a id="reviewNext">&#10095;</a>
+      </div>
+
+
+    </section>
+
+    <section class="writeReviews">
+      <div id="reviewModal" class="container">
+        <form target="_blank" method="post" action="http://localhost:8888/review">
+          <div id="reviewInput">
+            <div  id="reviewNaam"><input type="text" name="name" placeholder="Naam" required></div><br>
+            <div id="reviewScore">
+              <input id="givenStar5" type="radio" name="rating" value="5" class="hide"/>
+              <label for="givenStar5"></label>
+              <input id="givenStar4" type="radio" name="rating" value="4" class="hide"/>
+              <label for="givenStar4"></label>
+              <input id="givenStar3" type="radio" name="rating" value="3" class="hide"/>
+              <label for="givenStar3"></label>
+              <input id="givenStar2" type="radio" name="rating" value="2" class="hide"/>
+              <label for="givenStar2"></label>
+              <input id="givenStar1" type="radio" name="rating" value="1" class="hide"/>
+              <label for="givenStar1"></label>
+            </div>
+            <div  id="reviewTextarea"><textarea name="reviewContent" placeholder="review" required></textarea></div><br>
+            <input class="submit" type="submit" value="VERZENDEN">
+          </form>
+        </div>
+    </section>
+
+  </body>
+</html>

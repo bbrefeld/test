@@ -76,6 +76,7 @@
 #over-onsMain .statistieken {
   background-color: #2a3443;
   color: white;
+  flex-wrap: wrap;
 }
 #over-onsMain .statistieken .container {
   display: flex;
@@ -238,4 +239,12 @@
     height: 5rem;
     margin-bottom: 2rem;
   }
+}
+
+/* footer svg fix */
+footer svg::before {
+  filter: brightness(0) saturate(100%);
+}
+footer svg {
+  filter: invert(15%) sepia(44%) saturate(443%) hue-rotate(176deg) brightness(89%) contrast(85%);
 }

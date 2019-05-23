@@ -182,3 +182,11 @@
     border-radius: 10px;
   }
 }
+
+/* footer svg fix */
+footer svg::before {
+  filter: brightness(0) saturate(100%);
+}
+footer svg {
+  filter: invert(15%) sepia(44%) saturate(443%) hue-rotate(176deg) brightness(89%) contrast(85%);
+}

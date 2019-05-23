@@ -556,7 +556,7 @@ th {
 }
 
 /* Very small screens */
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
   header address figure figcaption {
     display: none;
   }

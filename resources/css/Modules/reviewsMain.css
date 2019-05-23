@@ -1,8 +1,11 @@
 #reviewsMain .reviews {
   height: 20rem;
 }
+#reviewsMain .container {
+  margin-bottom: 0px;
+}
 #reviewsMain .currentStats {
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 #reviewsMain .currentStats figure {
   position: relative;
@@ -34,7 +37,7 @@
   filter: invert(59%) sepia(73%) saturate(1397%) hue-rotate(1deg) brightness(106%) contrast(102%);
 }
 #reviewsMain .currentStats .container p {
-  width: 100%;
+  min-width: 100%;
   text-align: center;
 }
 
@@ -153,7 +156,7 @@
   width: 3rem;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../images/icons/star.svg");
+  background-image: url("../../images/icons/star.svg");
   filter: invert(86%) sepia(9%) saturate(21%) hue-rotate(10deg) brightness(100%) contrast(86%);
 }
 #reviewsMain #reviewInput #reviewNaam input, #reviewsMain #reviewInput #reviewTextarea, #reviewsMain #reviewInput #reviewTextarea textarea {
