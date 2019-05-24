@@ -11,7 +11,7 @@
   position: relative;
 }
 #reviewsMain .currentStats .full, #reviewsMain .currentStats .empty {
-  height: 2rem;
+  height: 4rem;
 }
 #reviewsMain .currentStats div img {
   height: 100%;
@@ -39,6 +39,7 @@
 #reviewsMain .currentStats .container p {
   min-width: 100%;
   text-align: center;
+  padding-top: 2rem;
 }
 
 #reviewsMain .currentReviews {
@@ -48,11 +49,20 @@
   flex-wrap: wrap;
   align-content: center;
   overflow: hidden;
+  background-color: #f3f5f9
+}
+#reviewsMain .currentReviews h2 {
+  min-width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+#reviewsMain .currentReviews p {
+  padding-bottom: 2rem;
 }
 
 #reviewsMain .visibleReviews {
   width: 100%;
-  height: 15rem;
+  height: 20rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,21 +70,21 @@
   flex-wrap: wrap;
   left: 0;
   right: 0;
-  border: 1px solid blue;
   box-sizing: border-box;
   z-index: 1;
 }
 #reviewsMain .visibleReviews div {
   display: flex;
   justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
-  background-color: lightgray;
+  background-color: white;
+  border-radius: 0.3rem;
   width: 18%;
   height: 80%;
   margin: 0 1% 0 1%;
 }
 #reviewsMain .visibleReviews div p {
-  height: 80%;
   width: 100%;
   text-align: center;
 }
@@ -94,11 +104,11 @@
 }
 #reviewsMain #reviewOverlay1, #reviewsMain #reviewOverlay2 {
   position: relative;
-  bottom: 15rem;
-  background-color: white;
+  bottom: 20rem;
+  background-color: #f3f5f9;
   z-index: 2;
   width: 20%;
-  height: 15rem;
+  height: 20rem;
   margin-bottom: -15rem;
   display: flex;
   align-items: center;
@@ -106,13 +116,11 @@
 #reviewsMain #reviewOverlay1 {
   margin-left: 0px;
   margin-right: auto;
-  border-right: 1px solid blue;
   justify-content: flex-end;
 }
 #reviewsMain #reviewOverlay2{
   margin-left: auto;
   margin-right: 0px;
-  border-left: 1px solid blue;
   justify-content: flex-start;
 }
 
@@ -124,9 +132,24 @@
 #reviewsMain #reviewPrev:hover, #reviewsMain #reviewNext:hover {
   background-color: lightgray;
 }
-
-#reviewsMain .writeReviews form {
-  width: 70%;
+#reviewsMain .writeReviews {
+  flex-wrap: wrap;
+  background-color: #f3f5f9;
+}
+#reviewsMain .writeReviews .container {
+  justify-content: flex-start;
+}
+#reviewsMain .writeReviews .container h3 {
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+#reviewsMain .writeReviews .container form {
+  width: 60%;
+}
+#reviewsMain .writeReviews .container form input {
+  font-family: 'Ubuntu', sans-serif;
 }
 #reviewsMain #reviewInput {
   width: 100%;
@@ -146,6 +169,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 #reviewsMain #reviewScore input {
   display: none;
@@ -162,4 +187,25 @@
 #reviewsMain #reviewInput #reviewNaam input, #reviewsMain #reviewInput #reviewTextarea, #reviewsMain #reviewInput #reviewTextarea textarea {
   width: 100%;
   box-sizing: border-box;
+}
+#reviewsMain #reviewInput #reviewNaam input, #reviewsMain #reviewInput #reviewTextarea textarea {
+  color: #999;
+  background-color: #eee;
+  border: 0px;
+  padding: 1rem;
+}
+#reviewsMain #reviewInput #reviewTextarea textarea {
+  height: 8rem;
+}
+#reviewsMain #reviewInput .submit {
+  margin-left: auto;
+  margin-right: 0px;
+  background-color: #368ff4;
+  border-radius: 0.3rem;
+  letter-spacing: 2px;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 0px;
+  font-weight: bold;
 }
