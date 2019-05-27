@@ -6,6 +6,7 @@
 }
 #reviewsMain .currentStats {
   padding-bottom: 2rem;
+  padding-top: 4rem;
 }
 #reviewsMain .currentStats figure {
   position: relative;
@@ -40,6 +41,10 @@
   min-width: 100%;
   text-align: center;
   padding-top: 2rem;
+}
+
+.review-svg {
+  background-color: #f3f5f9;
 }
 
 #reviewsMain .currentReviews {
@@ -208,4 +213,9 @@
   font-size: 1rem;
   border: 0px;
   font-weight: bold;
+}
+
+/* footer svg fix */
+footer .svg {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(13%) saturate(273%) hue-rotate(198deg) brightness(111%) contrast(96%);
 }
